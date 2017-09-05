@@ -22,8 +22,13 @@ app.use(express.static('./public'));
 
 
 
-
 app.get('/test/*', tmTest);
+app.get('/*', (request, response) => response.sendFile('index.html', {root: './public'}));
+
+// app.get('/*',function(req,res){
+//   res.sendFile('index.html',{root:'./public'});
+//
+// })
 
 function tmTest(request, response) {
   (requestProxy({
