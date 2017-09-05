@@ -1,6 +1,6 @@
 'use strict';
 
-const pg = require('pg');
+
 const fs = require('fs');
 const express = require('express');
 const jquery = require('jquery');
@@ -8,13 +8,9 @@ const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://postgres:postgres@localhost:5432/killovolt';
-const client = new pg.Client(conString);
+
 let callRes;
 let resList;
-
-client.connect();
-client.on('error', err => console.error(err));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
