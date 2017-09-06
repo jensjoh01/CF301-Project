@@ -68,6 +68,7 @@
   margin-left: 50px;
 }
 
+
 /*.navbar-nav li.active-link a {
   border-bottom: 1px solid #FFFEFC;
   padding-bottom: 1px;
@@ -87,4 +88,16 @@
   .open-slide {
     display: none
   }
+}
+
+******About*******
+
+.team1 {
+  float: right;
+  width: 50%;
+}
+
+.team2 {
+  float: right;
+  width: 50%;
 }
