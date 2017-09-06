@@ -13,20 +13,51 @@
 
   <title>Ticket Jedi | Welcome</title>
 
-
-  <style>
-    #map {
-      width: 100%;
-      height: 400px;
-      background-color: grey;
-    }
-  </style>
-
-
 </head>
 
 <body>
+  <script id="list-template" type="text/x-handlebars-template">
+  <ul>
+    <li><a href={{url}}>{{name}}</a></li>
+    <li>{{date.localDate}} </li>
+    <li>{{venues}}</li>
+    <li>{{genre.segment.name}}</li>
+  </ul>
+  </script>
 
+
+
+<nav class="navbar">
+
+  <div class="open-slide">
+    <a href="#" onclick="openSlideMenu()">
+      <svg width="30" height="30">
+          <path d="M0,5 30,5" stroke="#7C0A02" stroke-width="5"/>
+          <path d="M0,14 30,14" stroke="#7C0A02" stroke-width="5"/>
+          <path d="M0,23 30,23" stroke="#7C0A02" stroke-width="5"/>
+      </svg>
+    </a>
+  </div>
+
+  <ul class="navbar-nav">
+    <li><a href="#">About</a></li>
+    <li class="active-link"><a href="#">Home</a></li>
+  </ul>
+</nav>
+
+<div id="side-menu" class="side-nav">
+  <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+  <a href="#" class="active-link">Home</a>
+  <a href="#">About</a>
+</div>
+
+  </nav>
+
+
+<body>
+
+
+<body>
   <form id="input-form">
 
     <!-- <label>
@@ -61,6 +92,12 @@
 
       </select>
 
+
+    <fieldset>
+    <label>
+          <input type="text" id="search-keyword" placeholder="keyword">
+        </label>
+
     <label>
         <input type="text" id="search-city" placeholder="city" required>
       </label>
@@ -81,13 +118,28 @@
   </form>
 </br>
 
+  <select id="search-classify">
+    <option value="">Select Class</option>
+    <option value="Music">Music</option>
+    <option value="Films">Films</option>
+    <option value="Sports">Sports</option>
+    <option value="Arts & Theatre">Arts and Theatre</option>
+  </select>
+
+<button type="submit">CLICK</button>
+<fieldset>
+  </form>
+<br><br>
+
 
   <!-- <form action=“upload.php” method=“post” enctype=“multipart/form-data”>
     Select image to upload:
     <input type=“file” name=“fileToUpload” id=“fileToUpload”>
     <input type=“submit” value=“Upload Image” name=“submit”>
   </form> -->
-  <div id="map"></div>
+  <div id="mapContainer">
+    <div id="map"></div>
+  </div>
 
 
   <script id="list-template" type="text/x-handlebars-template">
@@ -97,6 +149,10 @@
   <section id="listResult">Results here:
     <ul></ul>
   </section>
+
+  <section id="listResult"></section>
+
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
