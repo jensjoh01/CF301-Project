@@ -12,6 +12,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
 
+// Allows the user to type in exact URL and go to that page
+app.get('/', (request, response) => response.sendFile('index.html', {root: './public'}));
+app.get('/about', (request, response) => response.sendFile('about.html', {root: './public'}));
+// app.get('/ticketmaster/*', tmTest);
+
+
 
 app.get('/test/:loc/:keyword?/:classify?', tmTest);
 app.get('/*', (request, response) => response.sendFile('index.html', {root: './public'}));
