@@ -5,7 +5,7 @@
 }
 
 .navbar a {
-  float: left;
+  float: right;
   display: block;
   color: #FFFEFC;
   text-align: center;
@@ -25,7 +25,7 @@
 }
 
 .branding {
-  float: right;
+  float: left;
   color: #FFFEFC;
   text-align: center;
   padding: 14px 16px;
@@ -39,7 +39,7 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #111;
   opacity: 0.9;
   overflow-x: hidden;
