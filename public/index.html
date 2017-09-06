@@ -1,54 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <style>
-     #map {
-       width: 100%;
-       height: 400px;
-       background-color: grey;
-     }
-   </style>
-  </head>
-  <body>
+<html lang="en">
 
-    <form id="input-form">
-      <label>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="/vendor/styles/reset.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/modules.css">
+
+  <title>Ticket Jedi | Welcome</title>
+
+
+  <style>
+    #map {
+      width: 100%;
+      height: 400px;
+      background-color: grey;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <form id="input-form">
+    <label>
           <input type="text" id="search-keyword" placeholder="keyword" required>
         </label>
-      <label>
+    <label>
         <input type="text" id="search-postal" placeholder="postalCode" required>
       </label>
-      <button type="submit">CLICK</button>
-      </form>
+    <button type="submit">CLICK</button>
+  </form>
 
 
-    <form action=“upload.php” method=“post” enctype=“multipart/form-data”>
-        Select image to upload:
-        <input type=“file” name=“fileToUpload” id=“fileToUpload”>
-        <input type=“submit” value=“Upload Image” name=“submit”>
-    </form>
-    <div id="map"></div>
+  <form action=“upload.php” method=“post” enctype=“multipart/form-data”>
+    Select image to upload:
+    <input type=“file” name=“fileToUpload” id=“fileToUpload”>
+    <input type=“submit” value=“Upload Image” name=“submit”>
+  </form>
+  <div id="map"></div>
 
 
-      <script id="list-template" type="text/x-handlebars-template">
-          <li href={{url}}><strong>{{name}}</strong> {{date}} {{location}} {{venues}} {{genre}}</li>
-        </script>
+  <script id="list-template" type="text/x-handlebars-template">
+    <li href={{url}}><strong>{{name}}</strong> {{date}} {{location}} {{venues}} {{genre}}</li>
+  </script>
 
-      <section id="listResult">Result here:<ul></ul></section>
+  <section id="listResult">Result here:
+    <ul></ul>
+  </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 
 
-    <script type="text/javascript" src="./views/view.js"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CpO1gfAC0k_usGb6J8adZj3QwoT1OZs">
-    </script>
+  <script type="text/javascript" src="./scripts/views/view.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CpO1gfAC0k_usGb6J8adZj3QwoT1OZs">
+  </script>
 
-    <script src="./controllers/controller.js"></script>
-  
-  </body>
+  <script src="./scripts/controllers/controller.js"></script>
+
+</body>
+
 </html>
