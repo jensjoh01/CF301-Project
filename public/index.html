@@ -29,20 +29,20 @@
 
   <form id="input-form">
     <label>
-          <input type="text" id="search-keyword" placeholder="keyword" required>
+          <input type="text" id="search-keyword" placeholder="keyword">
         </label>
     <label>
-        <input type="text" id="search-postal" placeholder="postalCode" required>
+        <input type="text" id="search-city" placeholder="city" required>
       </label>
     <button type="submit">CLICK</button>
   </form>
 
 
-  <form action=“upload.php” method=“post” enctype=“multipart/form-data”>
+  <!-- <form action=“upload.php” method=“post” enctype=“multipart/form-data”>
     Select image to upload:
     <input type=“file” name=“fileToUpload” id=“fileToUpload”>
     <input type=“submit” value=“Upload Image” name=“submit”>
-  </form>
+  </form> -->
   <div id="map"></div>
 
 
@@ -55,15 +55,13 @@
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 
 
   <script type="text/javascript" src="./scripts/views/view.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CpO1gfAC0k_usGb6J8adZj3QwoT1OZs">
-  </script>
-
   <script src="./scripts/controllers/controller.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CpO1gfAC0k_usGb6J8adZj3QwoT1OZs">
+    </script>
 
 </body>
 
