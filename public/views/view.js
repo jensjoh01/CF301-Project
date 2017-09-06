@@ -36,7 +36,7 @@ function initMarkers(map) {
       });
 
       var infoWindow = new google.maps.InfoWindow({
-        content: `<h1>Event: ${json.name}</h1> <p>Date: ${json.date.localDate}</p> <p> Venue: ${json.venues}</p> <p>Category: ${json.genre.segment.name} </p> <p>Price: ${json.price ? parseInt(json.price[0].min) + ' - ' + parseInt(json.price[0].max) : 'N/A'}`
+        content: `<h1>Event: ${json.name}</h1> <p>Date: ${json.date.localDate}</p> <p> Venue: ${json.venues}</p> <p>Category: ${json.genre.segment.name} </p> <p>Price: ${json.price ? '$'+parseInt(json.price[0].min) + ' - ' + '$' + parseInt(json.price[0].max) : 'N/A'}`
       })
 
       marker.addListener('click', function() {
