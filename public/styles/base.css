@@ -5,7 +5,7 @@
 }
 
 .navbar a {
-  float: right;
+  float: left;
   display: block;
   color: #FFFEFC;
   text-align: center;
@@ -30,7 +30,7 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  right: 0;
+  left: 0;
   background-color: #111;
   opacity: 0.9;
   overflow-x: hidden;
@@ -60,13 +60,13 @@
 }
 
 .navbar-nav li.active-link a {
-     border-bottom: 1px solid #FFFEFC;
-     padding-bottom:1px;
- }
+  border-bottom: 1px solid #FFFEFC;
+  padding-bottom: 1px;
+}
 
- #side-menu a.active-link {
-   border-left: 1px solid #FFFEFC;
- }
+#side-menu a.active-link {
+  border-left: 1px solid #FFFEFC;
+}
 
 @media(max-width:568px) {
   .navbar-nav {
