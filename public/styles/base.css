@@ -24,6 +24,15 @@
   color: #000;
 }
 
+.branding {
+  float: left;
+  color: #FFFEFC;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .side-nav {
   height: 100%;
   width: 0;
@@ -60,13 +69,13 @@
 }
 
 .navbar-nav li.active-link a {
-     border-bottom: 1px solid #FFFEFC;
-     padding-bottom:1px;
- }
+  border-bottom: 1px solid #FFFEFC;
+  padding-bottom: 1px;
+}
 
- #side-menu a.active-link {
-   border-left: 1px solid #FFFEFC;
- }
+#side-menu a.active-link {
+  border-left: 1px solid #FFFEFC;
+}
 
 @media(max-width:568px) {
   .navbar-nav {
