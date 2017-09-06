@@ -24,6 +24,15 @@
   color: #000;
 }
 
+.branding {
+  float: right;
+  color: #FFFEFC;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .side-nav {
   height: 100%;
   width: 0;
