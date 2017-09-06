@@ -6,8 +6,8 @@ Events.all = [];
 Search.trigger = function(){
 
   $.get(`/test/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}`)
-  .then(data => {console.log(data);Events.all = data._embedded.events
-  .map(obj => new Events(obj))}).then(initMap).then(view.index).catch(console.error);
+  .then(data => Events.all = data._embedded.events
+  .map(obj => new Events(obj))).then(initMap).then(view.index).catch(console.error);
 };
 
 
@@ -26,8 +26,8 @@ let newSearch = {};
 
 function Search(keyword,loc,classify){
   this.loc = loc;
-  this.keyword = keyword;
-  this.classify = classify;
+  this.keyword = keyword.length === 0 ? undefined : keyword;
+  this.classify = classify.length === 0 ? undefined : classify;
 }
 
 Search.listener = function() {
@@ -43,7 +43,7 @@ Search.submit = function(event) {
   newSearch = new Search($('#search-keyword').val(),
   $('#search-city').val(),$('#search-classify').val());
   Search.trigger();
-  $('#input-form').reset();
+  // $('#input-form').reset();
 }
 
 Search.listener();

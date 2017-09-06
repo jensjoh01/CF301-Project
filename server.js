@@ -21,9 +21,15 @@ app.get('/*', (request, response) => response.sendFile('index.html', {root: './p
 function tmTest(request, response) {
   console.log(request.params);
   (requestProxy({
-
-    url: `https://app.ticketmaster.com/discovery/v2/events.json?city=${request.params.loc}&keyword=${request.params.keyword}&classificationName=${request.params.classify}&apikey=ukPG2DZCA3xofnrLBEuIGHyCa49KlNA0`
+    url: `https://app.ticketmaster.com/discovery/v2/events.json?
+    city=${request.params.loc}&keyword=${request.params.keyword}
+    &classificationName=${request.params.classify}
+    &apikey=${process.env.APIKEY}`
   }))(request, response);
+
+  // if(response._embedded.events.length === 0){
+  //   alert('no result for your search');
+  // }
 }
 
 
