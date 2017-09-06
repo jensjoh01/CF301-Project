@@ -2,10 +2,8 @@
 
 'use strict';
 
-console.log('hihi')
-
 $.get('/test/testing').then(data => Events.all = data._embedded.events
-.map(obj => new Events(obj)));
+.map(obj => new Events(obj))).then(initMap);
 
 
 

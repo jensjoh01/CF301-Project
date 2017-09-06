@@ -28,7 +28,7 @@ app.get('/*', (request, response) => response.sendFile('index.html', {root: './p
 
 function tmTest(request, response) {
   (requestProxy({
-    url: 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&postalCode=98109&apikey=ukPG2DZCA3xofnrLBEuIGHyCa49KlNA0',
+    url: 'https://app.ticketmaster.com/discovery/v2/events.json?&city=Seattle&apikey=ukPG2DZCA3xofnrLBEuIGHyCa49KlNA0',
   }))(request, response);
 }
 
