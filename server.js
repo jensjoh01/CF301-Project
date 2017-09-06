@@ -13,13 +13,13 @@ app.use(express.static('./public'));
 
 
 
-app.get('/test/:loc', tmTest);
+app.get('/test/:loc/:keyword', tmTest);
 app.get('/*', (request, response) => response.sendFile('index.html', {root: './public'}));
 
 
 
 function tmTest(request, response) {
-  console.log(request.params.loc);
+  console.log(request.params.loc + request.params.keyword);
   (requestProxy({
 
     url: `https://app.ticketmaster.com/discovery/v2/events.json?postalCode=${request.params.loc}&keyword=${request.params.keyword}&apikey=ukPG2DZCA3xofnrLBEuIGHyCa49KlNA0`

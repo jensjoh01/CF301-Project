@@ -5,13 +5,13 @@
 
 Events.all = [];
 
-
-
 Search.trigger = function(){
-  $.get(`/test/${newSearch.loc}`)
+
+  $.get(`/test/${newSearch.loc}/${newSearch.keyword}`)
   .then(data => Events.all = data._embedded.events
-  .map(obj => new Events(obj)))
-}
+  .map(obj => new Events(obj))).then(initMap);
+  newSearch = {};
+};
 
 
 function Events(obj){
@@ -33,6 +33,7 @@ let newSearch = {};
 function Search(keyword,loc){
   this.keyword = keyword;
   this.loc = loc;
+  console.log(this.keyword)
 }
 
 Search.listener = function() {
