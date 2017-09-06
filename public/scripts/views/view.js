@@ -59,8 +59,11 @@ function initMarkers(map) {
   });
 }
 
-// $('#listResult').on('click','ul', function() {
-//   $(this).css('background-color', '#59A5D8');
-//
-//   console.log($(this))
-// })
+function openSlideMenu(){
+  document.getElementById('side-menu').style.width = '250px';
+}
+
+function closeSlideMenu(){
+  document.getElementById('side-menu').style.width = '0';
+}
+
