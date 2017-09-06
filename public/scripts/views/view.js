@@ -28,12 +28,16 @@ function initMap() {
 }
 
 function initMarkers(map) {
-  Events.all.forEach(function(json) {
+
+  Events.all.forEach(function(json, index) {
+
     if(json.location) {
+
       var marker = new google.maps.Marker({
         position: {lat: parseFloat(json.location.latitude), lng: parseFloat(json.location.longitude)},
         map: map
       });
+
 
       var infoWindow = new google.maps.InfoWindow({
         content: `<h1>Event: ${json.name}</h1> <p>Date: ${json.date.localDate}</p> <p> Venue: ${json.venues}</p> <p>Category: ${json.genre.segment.name} </p> <p>Price: ${json.price ? '$'+parseInt(json.price[0].min) + ' - ' + '$' + parseInt(json.price[0].max) : 'N/A'}`
@@ -41,7 +45,14 @@ function initMarkers(map) {
 
       marker.addListener('click', function() {
         infoWindow.open(map, marker);
+        // marker.setPosition({lat: 47.6062, lng: -122.3321})
+        // marker = {
+        //   postion: {lat: 47.6062, lng: -122.3321}
+        // }
       })
+
+
+
     }
   });
 }
