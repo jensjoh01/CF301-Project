@@ -43,7 +43,7 @@ Search.submit = function(event) {
   newSearch = new Search($('#search-keyword').val(),
   $('#search-city').val(),$('#search-classify').val());
   Search.trigger();
-  // $('#input-form').reset();
+  $('#input-form')[0].reset();
 }
 
 Search.listener();
