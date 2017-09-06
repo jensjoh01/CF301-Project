@@ -22,8 +22,8 @@
     }
   </style>
 
-
 </head>
+
 
 
 <nav class="navbar">
@@ -55,22 +55,33 @@
 
 <body>
 
+
+<body>
   <form id="input-form">
+    <fieldset>
     <label>
           <input type="text" id="search-keyword" placeholder="keyword">
         </label>
     <label>
         <input type="text" id="search-city" placeholder="city" required>
       </label>
-    <button type="submit">CLICK</button>
+
+
+
+  <select id="search-classify">
+    <option value="">Select Class</option>
+    <option value="Music">Music</option>
+    <option value="Films">Films</option>
+    <option value="Sports">Sports</option>
+    <option value="Arts & Theatre">Arts and Theatre</option>
+  </select>
+
+<button type="submit">CLICK</button>
+<fieldset>
   </form>
+<br><br>
 
 
-  <!-- <form action=“upload.php” method=“post” enctype=“multipart/form-data”>
-    Select image to upload:
-    <input type=“file” name=“fileToUpload” id=“fileToUpload”>
-    <input type=“submit” value=“Upload Image” name=“submit”>
-  </form> -->
   <div id="map"></div>
 
 
