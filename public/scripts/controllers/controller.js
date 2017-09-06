@@ -1,18 +1,14 @@
-
-
 'use strict';
 
 
 Events.all = [];
 
-
-
 Search.trigger = function(){
-  $.get(`/test/${newSearch.loc}`)
 
-  .then(data => {console.log(data);Events.all = data._embedded.events
-  .map(obj => new Events(obj))}).then(initMap);
-}
+  $.get(`/test/${newSearch.loc}/${newSearch.keyword}`)
+  .then(data => Events.all = data._embedded.events
+  .map(obj => new Events(obj))).then(initMap);
+};
 
 
 function Events(obj){
@@ -26,14 +22,11 @@ function Events(obj){
 
 }
 
-
-
-
 let newSearch = {};
 
 function Search(keyword,loc){
-  this.keyword = keyword;
   this.loc = loc;
+  this.keyword = keyword;
 }
 
 Search.listener = function() {
@@ -43,13 +36,10 @@ Search.listener = function() {
 };
 
 
-
-
-
 Search.submit = function(event) {
   event.preventDefault();
   newSearch = new Search($('#search-keyword').val(),
-  $('#search-postal').val());
+  $('#search-city').val());
   Search.trigger();
 }
 

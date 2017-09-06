@@ -4,7 +4,6 @@
 const view = {}
 const preList = function(){
   let $list = $('#listResult');
-
   $list.find('ul').empty();
   // $list.show().siblings().hide();
 };
@@ -15,7 +14,7 @@ view.index = function(){
   preList();
   $('#listResult ul').append(
 
-    
+
   );
 }
 
