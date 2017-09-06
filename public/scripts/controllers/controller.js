@@ -5,10 +5,10 @@ Events.all = [];
 
 Search.trigger = function(){
 
-  $.get(`/test/${newSearch.loc}/${newSearch.keyword}`)
-  .then(data => Events.all = data._embedded.events
-  .map(obj => new Events(obj))).then(initMap);
-};
+  $.get(`/test/${newSearch.loc}`)
+  .then(data => {console.log(data);Events.all = data._embedded.events
+  .map(obj => new Events(obj))}).then(initMap).then(view.index);
+}
 
 
 function Events(obj){
@@ -34,6 +34,7 @@ Search.listener = function() {
   // $('#export-field').hide();
   $('#input-form').on('submit', Search.submit);
 };
+
 
 
 Search.submit = function(event) {
