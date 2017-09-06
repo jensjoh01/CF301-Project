@@ -13,32 +13,16 @@
   </head>
   <body>
 
-    <form action=“/formPage” method=“post”>
-        <div>
-            <label for=“Artist/Event”>Artist/Event:</label>
-            <input type=“text” id=“name” name=“artistEvent_name”>
-        </div>
-        <button type=“button”>My Location</button>
-        <div>
-    <label for=“location”>City:</label>
-            <input type=“text” id=“location” name=“user_location”>
-        </div>
-
-       <div>
-            <label for=“zipCode”>Zip Code:</label>
-            <input type=“text” id=“zipCode” name=“user_zip”>
-        </div>
-        <div>
-            <label for=“cash”>Available Funds:</label>
-            <input type=“text” id=“cash” name=“user_cash”>
-        </div>
-    <button type=“button”>See Tickets</button>
-
-        <div>
-          <label for=“Review”>Event Review:</label>
-          <textarea id=“msg” name=“show_review”></textarea>
-        </div>
+    <form id="input-form">
+      <label>
+          <input type="text" id="search-keyword" placeholder="keyword" required>
+        </label>
+      <label>
+        <input type="text" id="search-postal" placeholder="postalCode" required>
+      </label>
+      <button type="submit">CLICK</button>
       </form>
+
 
     <form action=“upload.php” method=“post” enctype=“multipart/form-data”>
         Select image to upload:
@@ -48,13 +32,23 @@
     <div id="map"></div>
 
 
-    <button class="tab"><a href="/test"></a>CHECK</button>
+      <script id="list-template" type="text/x-handlebars-template">
+          <li href={{url}}><strong>{{name}}</strong> {{date}} {{location}} {{venues}} {{genre}}</li>
+        </script>
+
+      <section id="listResult">Result here:<ul></ul></section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="./controllers/controller.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+
+
     <script type="text/javascript" src="./views/view.js"></script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CpO1gfAC0k_usGb6J8adZj3QwoT1OZs&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CpO1gfAC0k_usGb6J8adZj3QwoT1OZs">
     </script>
+
+    <script src="./controllers/controller.js"></script>
+  
   </body>
 </html>

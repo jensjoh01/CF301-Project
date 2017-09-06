@@ -1,25 +1,23 @@
 'use strict';
 
-// // var Events = {}
-// // Events.all = [];
-//
-// $.ajax({
-//   type:"GET",
-//   url:"https://app.ticketmaster.com/discovery/v2/events.json?city=Seattle&apikey=Po1JusEraIWYM2uF8yXnlvYFsYLAI7V1",
-//   async:true,
-//   dataType: "json",
-//   success: function(json) {
-//               // console.log(json);
-//               // Parse the response.
-//               // Do other things.
-//               json._embedded.events.forEach(data => Events.all.push(data))
-//               console.log(Events.all[0]._embedded.venues[0].name)
-//               initMap();
-//            },
-//   error: function(xhr, status, err) {
-//               // This time, we do not end up here!
-//            }
-// });
+
+const view = {}
+const preList = function(){
+  let $list = $('#listResult');
+
+  $list.find('ul').empty();
+  // $list.show().siblings().hide();
+};
+
+const render = Handlebars.compile($('#list-template').text());
+
+view.index = function(){
+  preList();
+  $('#listResult ul').append(
+    Events.all
+  );
+}
+
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -30,21 +28,18 @@ function initMap() {
 }
 
 function initMarkers(map) {
-  var marker = Events.all.forEach(function(val,index,array) {
-    new google.maps.Marker({
-    position: {lat: parseFloat(val._embedded.venues[0].location.latitude), lng: parseFloat(val._embedded.venues[0].location.longitude)},
-    map: map
+  Events.all.forEach(function(json) {
+    var marker = new google.maps.Marker({
+      position: {lat: parseFloat(json.location.latitude), lng: parseFloat(json.location.longitude)},
+      map: map
+    });
+
+    var infoWindow = new google.maps.InfoWindow({
+      content: `<h1>Event: ${json.name}</h1> <p>Date: ${json.date.localDate}</p> <p> Venue: ${json.venues}</p> <p>Category: ${json.genre.segment.name} </p> <p>Price: $${parseInt(json.price[0].min)} - $${parseInt(json.price[0].max)}`
+    })
+
+    marker.addListener('click', function() {
+      infoWindow.open(map, marker);
+    })
   });
-});
-
-  // var contentString = '<div id="content">' +
-  // '<p>Tori Amos</p>' +
-  // '</div>';
-
-  // var infowindow = new google.maps.InfoWindow({content: contentString});
-  // // console.log(marker);
-  // marker.addListener('click', function(){
-  //   // console.log('hello?')
-  //   infowindow.open(map, marker);
-  // });
-}
+};

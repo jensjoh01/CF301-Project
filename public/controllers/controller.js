@@ -2,11 +2,16 @@
 
 'use strict';
 
-console.log('hihi')
 
-$.get('/test/testing').then(data => Events.all = data._embedded.events
-.map(obj => new Events(obj)));
+Events.all = [];
 
+
+
+Search.trigger = function(){
+  $.get(`/test/${newSearch.loc}`)
+  .then(data => {console.log(data);Events.all = data._embedded.events
+  .map(obj => new Events(obj))});
+}
 
 
 function Events(obj){
@@ -20,4 +25,31 @@ function Events(obj){
 
 }
 
-Events.all = [];
+
+
+
+let newSearch = {};
+
+function Search(keyword,loc){
+  this.keyword = keyword;
+  this.loc = loc;
+}
+
+Search.listener = function() {
+  // $('.tab-content').show();
+  // $('#export-field').hide();
+  $('#input-form').on('submit', Search.submit);
+};
+
+
+
+
+
+Search.submit = function(event) {
+  event.preventDefault();
+  newSearch = new Search($('#search-keyword').val(),
+  $('#search-postal').val());
+  Search.trigger();
+}
+
+Search.listener();
