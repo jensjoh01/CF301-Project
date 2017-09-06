@@ -79,12 +79,15 @@
 
 @media(max-width:568px) {
   .navbar-nav {
-    display: none
+    display: none;
+  }
+  .branding {
+    font-size: 30px;
   }
 }
 
 @media(min-width:568px) {
   .open-slide {
-    display: none
+    display: none;
   }
 }
