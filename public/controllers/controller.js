@@ -10,7 +10,7 @@ Events.all = [];
 Search.trigger = function(){
   $.get(`/test/${newSearch.loc}`)
   .then(data => Events.all = data._embedded.events
-  .map(obj => new Events(obj))).then(initMap);
+  .map(obj => new Events(obj)))
 }
 
 

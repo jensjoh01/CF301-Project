@@ -14,7 +14,8 @@ const render = Handlebars.compile($('#list-template').text());
 view.index = function(){
   preList();
   $('#listResult ul').append(
-    Events.all
+
+    
   );
 }
 

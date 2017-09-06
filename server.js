@@ -22,7 +22,7 @@ function tmTest(request, response) {
   console.log(request.params.loc);
   (requestProxy({
 
-    url: `https://app.ticketmaster.com/discovery/v2/events.json?postalCode=${request.params.loc}&apikey=ukPG2DZCA3xofnrLBEuIGHyCa49KlNA0`
+    url: `https://app.ticketmaster.com/discovery/v2/events.json?postalCode=${request.params.loc}&keyword=${request.params.keyword}&apikey=ukPG2DZCA3xofnrLBEuIGHyCa49KlNA0`
 
   }))(request, response);
 }
