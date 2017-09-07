@@ -16,41 +16,78 @@
 </head>
 
 <body>
+
   <header>
-    <h1>About Us</h1>
+
+    <nav class="navbar">
+      <div class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+      <svg width="30" height="30">
+          <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+          <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+          <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+      </svg>
+    </a>
+      </div>
+
+      <div class="branding">Ticket Jedi Logo</div>
+
+      <ul class="navbar-nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/index.html">Home</a></li>
+      </ul>
+
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="/index.html">Home</a>
+      <a href="/">About</a>
+    </div>
+
   </header>
 
   <main>
+    <h1>About the Developers</h1>
+
     <ul id="team">
-      <li>
+      <li class="team1">
         <img src="https://avatars2.githubusercontent.com/u/29118945?v=4&s=400" alt="">
         <h2 class="teamMember">Han</h2>
         <p>As a professional developer Han's goal is to contribute to building softwares that improve people's daily and social life. Han is a Honor graduate from the University of California, Merced with a B.S in Chemistry. </p>
       </li>
-      <li>
+
+      <li class="team1">
         <img src="https://avatars3.githubusercontent.com/u/28037759?v=4&s=400" alt="">
         <h2 class="teamMember">John</h2>
-        <p>John was born in a small town in North Dakota where he lived his entire life. Then after receiving a degree in Mechanical Engineering John got a job as an engineer for an oil and gas company and was able to travel and meet people from all around the world, since then he has had the travel bug and there hasn't been a cure. John also likes hiking, camping, coding and long walks on the beach! John moved to Seattle in July to attend Code Fellows.
+        <p>John was born in a small town in North Dakota where he lived his entire life. Then after receiving a degree in Mechanical Engineering John got a job as an engineer for an oil and gas company and was able to travel and meet people from all around
+          the world, since then he has had the travel bug and there hasn't been a cure. John also likes hiking, camping, coding and long walks on the beach! John moved to Seattle in July to attend Code Fellows.
         </p>
       </li>
-      <li>
+
+      <li class="team2">
         <img src="https://avatars0.githubusercontent.com/u/29240733?s=300" alt="">
         <h2 class="teamMember">Ryan</h2>
-        <p>Ryan is a veteran and current member of the Washington State National Gaurd. After taking 2 years of college for engineering he joined the Army in 2012. After passing the rigorous selection for Rangers he was assigned to 2nd Ranger Battalion where he deployed 4 times to Afghanistan and jumped out of many airplanes. After getting out of the Army in 2017 he started another rigorous training program at Code Fellows.
+        <p>Ryan is a veteran and current member of the Washington State National Gaurd. After taking 2 years of college for engineering he joined the Army in 2012. After passing the rigorous selection for Rangers he was assigned to 2nd Ranger Battalion where
+          he deployed 4 times to Afghanistan and jumped out of many airplanes. After getting out of the Army in 2017 he started another rigorous training program at Code Fellows.
         </p>
       </li>
-      <li>
+
+      <li class="team2">
         <img src="https://avatars0.githubusercontent.com/u/25647337?s=300" alt="">
         <h2 class="teamMember">Mario</h2>
-        <p>Mario is a Navy veteran of the submarine force and has visited many cities around the world. Mario has an Assosciate's of Technical Arts in Marine Systems Technology and a Bachelors of Science degree in Workforce Education and Development.  He is currently embarking on a new career in software development. He enjoys travel and visiting other countries and enjoying their culture. If not learning to code or spending time with his family he is learning chords on his guitar or attending rock concerts.</p>
+        <p>Mario is a Navy veteran of the submarine force and has visited many cities around the world. Mario has an Assosciate's of Technical Arts in Marine Systems Technology and a Bachelors of Science degree in Workforce Education and Development. He
+          is currently embarking on a new career in software development. He enjoys travel and visiting other countries and enjoying their culture. If not learning to code or spending time with his family he is learning chords on his guitar or attending
+          rock concerts.</p>
       </li>
+      
     </ul>
   </main>
 
   <footer>
 
   </footer>
-  <script src="js/app.js"></script>
+  <script src="scripts/views/view.js"></script>
 </body>
 
 </html>
