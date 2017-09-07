@@ -114,7 +114,7 @@ width: 148px;
   #search-keyword {
     width: 362px;
     height: 40px;
-    margin-left: 40px;
+    margin-left: 10px;
     margin-right: 40px;
     margin-top: 10px;
     border: solid;
@@ -132,9 +132,9 @@ width: 148px;
   #calendar {
     position: relative;
     display: inline-block;
-    width: 366px;
+    width: 376px;
     height: 40px;
-    margin: 10px 36px;
+    margin: 10px 25px;
 
   }
 

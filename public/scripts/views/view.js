@@ -76,6 +76,18 @@ $('#listResult').on('mouseleave', 'ul', function() {
   $(this).animate({borderWidth: 3},200);
 })
 
-// $('#searchButton').on('mouseenter', function() {
-//   $(this).animate({backgroundColor: 'black'},500)
-// })
+
+function initShowSearch() {
+  $('main').fadeIn();
+  $('#mapContainer, #listResult, #btn-back').hide();
+  //change event listeners
+}
+
+function initShowResults() {
+  $('main').hide();
+  $('#mapContainer, #listResult, #btn-back').fadeIn();
+  //change event listener
+}
+$('#btn-back').on('click',initShowSearch);
+$('#input-form').on('submit',initShowResults);
+initShowSearch();
