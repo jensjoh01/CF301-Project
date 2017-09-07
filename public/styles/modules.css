@@ -36,20 +36,27 @@ h2 {
 #search-classify {
   margin-left: 40px;
   margin-top: 10px;
-  width: 30%;
+  width: 300px;
   height: 40px;
 }
 
 #start-date {
   margin-left: 40px;
+  width: 191px;
   height: 40px;
 }
 
 #end-date {
   margin-left: 40px;
+  width: 191px;
   height: 40px;
 }
 
 button {
-  margin-right: 40px;
+  width: 120px;
+  height: 40px;
+  background-color: #7C0A02;
+  border: 0;
+  color: white;
+  font-size: 16px;
 }
