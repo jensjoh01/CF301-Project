@@ -1,0 +1,55 @@
+/*______Search Form_________*/
+/** {outline: orange 1px dashed;}*/
+
+main {
+
+}
+
+#strike {
+  text-decoration: line-through;
+}
+h2 {
+  display: inline-block;
+}
+#input-form {
+  margin: 0 auto;
+  /*outline: orange 1px dashed;*/
+  height: 300px;
+  max-width: 860px;
+}
+
+#search-city {
+  width: 366px;
+  height: 40px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+#search-keyword {
+  width: 366px;
+  height: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+}
+
+#search-classify {
+  margin-left: 40px;
+  margin-top: 10px;
+  width: 30%;
+  height: 40px;
+}
+
+#start-date {
+  margin-left: 40px;
+  height: 40px;
+}
+
+#end-date {
+  margin-left: 40px;
+  height: 40px;
+}
+
+button {
+  margin-right: 40px;
+}
