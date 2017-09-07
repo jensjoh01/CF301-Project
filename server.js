@@ -27,7 +27,7 @@ app.get('/*', (request, response) => response.sendFile('index.html', {root: './p
 function tmTest(request, response) {
   console.log(request.params);
   (requestProxy({
-    url: `https://app.ticketmaster.com/discovery/v2/events.json?size=100&city=${request.params.loc}&startDateTime=${request.params.minDate === 'null'?'':request.params.minDate + 'T07%3A27%3A00Z'}&endDateTime=${request.params.maxDate === 'null'?'':request.params.maxDate + 'T07%3A27%3A00Z'}&keyword=${request.params.keyword === 'null' ? '':request.params.keyword}&classificationName=${request.params.classify === 'null'?'':request.params.classify}&apikey=${process.env.apikey}`
+    url: `https://app.ticketmaster.com/discovery/v2/events.json?size=100&city=${request.params.loc}&startDateTime=${request.params.minDate === 'null'?'':request.params.minDate + 'T13%3A46%3A00Z'}&endDateTime=${request.params.maxDate === 'null' ? '' : request.params.maxDate + 'T13%3A46%3A00Z'}&keyword=${request.params.keyword === 'null' ? '':request.params.keyword}&classificationName=${request.params.classify === 'null' ? '':request.params.classify}&apikey=kMuEnMCwjfvHKS6Zl11v4AS7JppvpAy6`
   }))(request, response);
 }
 

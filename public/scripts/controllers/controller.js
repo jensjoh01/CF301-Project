@@ -68,10 +68,13 @@ Search.popCat = function(cat){
 
 Search.submit = function(event) {
   event.preventDefault();
-  // let searchCat = $('#search-category').val() === '' ? $('#search-classify').val() : $('#search-category').val();
+  let searchCat = $('#search-category').val() === '' ? $('#search-classify').val() : $('#search-category').val();
+  if($('#search-classify').val() === ''){
+    searchCat = '';
+  }
 
   newSearch = new Search($('#search-keyword').val(),
-  $('#search-city').val(),$('#search-classify').val(),$('#search-minDate').val(),$('#search-maxDate').val());
+  $('#search-city').val(),searchCat,$('#search-minDate').val(),$('#search-maxDate').val());
   Search.trigger();
   $('#input-form')[0].reset();
 }
