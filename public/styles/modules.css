@@ -13,7 +13,7 @@ h2 {
 }
 #input-form {
   margin: 0 auto;
-  /*outline: orange 1px dashed;*/
+  outline: orange 1px dashed;
   height: 300px;
   max-width: 860px;
 }
