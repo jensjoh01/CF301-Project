@@ -1,6 +1,13 @@
 /*******About********/
 /**{outline: orange 1px dashed;}*/
 
+body {
+  /*font: 15px/1.5 Arial, Helvetica, sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+
+  background-color: #f7f7f7;
+}
+
 .about-h1 {
   font-size: 3em;
   text-align: center;
@@ -25,13 +32,25 @@
 #about h3 {
   font-size: 2em;
   margin-top: 30px;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
+
 }
 
 #about p {
   margin: 30px;
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
+  line-height: 1.5em;
+
+
 }
 
 .navbar {
+  /*background-color: #D9B310;
+  background-color: #0B3C5D;*/
+  /*background-color: #328CC1;*/
+  /*background-color: #1D2731;*/
   background-color: #59A5D8;
   overflow: hidden;
   height: 60px;
@@ -53,13 +72,13 @@
 }
 
 .navbar a:hover {
-  background-color: #FFFEFC;
+  background-color: #328CC1;
   color: #000;
 }
 
 .branding {
   float: left;
-  color: #FFFEFC;
+  color: #1D2731;
   text-align: center;
   /*padding: 14px 16px;*/
   text-decoration: none;
