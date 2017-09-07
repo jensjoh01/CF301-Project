@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,11 +74,11 @@
       </label>
 
         <label>
-        <input type="date" id="start-date" placeholder="Start Date">
+        <input type="date" id="start-date" placeholder="After this date">
       </label>
 
         <label>
-        <input type="date" id="end-date" placeholder="End Date">
+        <input type="date" id="end-date" placeholder="Before this date">
       </label>
 
         <select id="search-classify">
@@ -80,6 +88,32 @@
         <option value="Sports">Sports</option>
         <option value="Arts & Theatre">Arts and Theatre</option>
       </select>
+
+
+    <!-- <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu" id="search-classify">
+        <li><a tabindex="-1" value="Music">Music</a></li>
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">more music <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" value="Hip-Hop/Rap">Hip-Hop/Rap</a></li>
+            <li><a tabindex="-1" value="Jazz">Jazz</a></li>
+          </ul>
+        </li>
+        <li><a tabindex="-1" value="Films">Films</a></li>
+        <li><a tabindex="-1" value="Sports">Sports</a></li>
+        <li><a tabindex="-1" value="Arts & Theatre">Arts & Theatre</a></li>
+
+
+
+
+      </ul>
+    </div> -->
+
+
+
 
         <button type="submit">CLICK</button>
         <fieldset>
@@ -92,18 +126,21 @@
 
 
     <section id="listResult"></section>
+    <script>
+    $(document).ready(function(){
+      $('.dropdown-submenu a.test').on("click", function(e){
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+      });
+    });
+    </script>
 
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 
 
     <script type="text/javascript" src="./scripts/views/view.js"></script>
     <script src="./scripts/controllers/controller.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CpO1gfAC0k_usGb6J8adZj3QwoT1OZs">
-    </script>
-
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CpO1gfAC0k_usGb6J8adZj3QwoT1OZs"></script>
 
 
 
