@@ -18,13 +18,13 @@ function Events(obj){
   this.location = obj._embedded.venues[0].location;
   this.venues = obj._embedded.venues[0].name;
   this.price = obj.priceRanges;
-  this.genre = obj.classifications[0];
-
+  this.genre = obj.classifications[0] ? obj.classifications[0] : null;
+  this.image = obj.images;
 }
 
 let newSearch = {};
 
-function Search(keyword,loc,classify){
+function Search(keyword,loc,classify,minDate){
   this.loc = loc;
 
   // keyword.length === 0 ? null : this.keyword = keyword;
@@ -32,6 +32,7 @@ function Search(keyword,loc,classify){
 
   this.keyword = keyword.length === 0 ? null : keyword;
   this.classify = classify.length === 0 ? null : classify;
+  this.minDate = minDate.length === 0 ? null : minDate;
 }
 
 Search.listener = function() {
@@ -45,7 +46,7 @@ Search.listener = function() {
 Search.submit = function(event) {
   event.preventDefault();
   newSearch = new Search($('#search-keyword').val(),
-  $('#search-city').val(),$('#search-classify').val());
+  $('#search-city').val(),$('#search-classify').val(),$('#search-minDate').val());
   Search.trigger();
   $('#input-form')[0].reset();
 }
