@@ -1,4 +1,6 @@
 /*______Search Form_________*/
+
+
 /** {outline: orange 1px dashed;}*/
 
 main h1 {
@@ -7,6 +9,9 @@ main h1 {
   font-family: sans-serif;
   font-size: 2em;
   margin-bottom: 20px;
+  /*background-color: #BCE7FD;*/
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+
 }
 
 legend {
@@ -22,7 +27,7 @@ fieldset {
 }
 
 #input-form {
-text-align: center;
+  text-align: center;
 }
 
 #search-city {
@@ -43,6 +48,7 @@ text-align: center;
   border-width: 2px;
   padding: 5px;
 }
+
 #search-classify {
   margin-top: 10px;
   width: 300px;
@@ -70,77 +76,85 @@ text-align: center;
 }
 
 #search-maxDate {
-height: 40px;
-border: solid;
-border-width: 2px;
-padding: 5px;
-width: 133px;
-margin-top: 10px;
+  height: 40px;
+  border: solid;
+  border-width: 2px;
+  padding: 5px;
+  width: 133px;
+  margin-top: 10px;
 }
 
 #search-minDate {
-height: 40px;
-border: solid;
-border-width: 2px;
-padding: 5px;
-width: 133px;
-margin-top: 10px;
+  height: 40px;
+  border: solid;
+  border-width: 2px;
+  padding: 5px;
+  width: 133px;
+  margin-top: 10px;
 }
 
 #searchButton {
   width: 180px;
   height: 60px;
-  border-radius: 10px;
   background-color: #328CC1;
   border: 0;
-  color: #D9B310;
+  color: #FFFEFC;
   font-size: 16px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 25px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
 }
 
-#searchButton:hover {
-  background-color: #A1CDF4;
-  transition: background-color 200ms ease-in;
+#searchButton:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1D2731;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform .3s ease-out;
 }
+
+#searchButton:hover:before {
+  transform: scaleX(1);
+}
+
 
 @media only screen and (min-width: 862px) {
-
   main h1 {
-    /*font-family: 'Open Sans', sans-serif;*/
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-top: 60px;
     font-family: sans-serif;
     font-size: 2em;
   }
-
   legend {
     margin-left: 35px;
-    /*font-family: sans-serif;*/
     font-family: 'Open Sans', sans-serif;
-
     font-size: 1.15em;
     padding: 5px;
   }
-
   fieldset {
     max-width: 100%;
     margin: 0 auto;
     margin-top: 80px;
     border: solid;
   }
-
   #input-form {
     margin: 0 auto;
     height: 300px;
     max-width: 860px;
     text-align: left;
   }
-
   #search-city {
     font-family: 'Open Sans', sans-serif;
-
     width: 357px;
     height: 40px;
     margin-left: 40px;
@@ -150,10 +164,8 @@ margin-top: 10px;
     padding-left: 10px;
     font-size: 1.1em;
   }
-
   #search-keyword {
     font-family: 'Open Sans', sans-serif;
-
     width: 357px;
     height: 40px;
     margin-left: 10px;
@@ -164,58 +176,47 @@ margin-top: 10px;
     padding-left: 10px;
     font-size: 1.1em;
   }
-
   #search-classify {
     font-family: 'Open Sans', sans-serif;
-
-
     margin-left: 40px;
     margin-top: 10px;
     width: 170px;
     height: 50px;
     font-size: 1.1em;
   }
-
   #search-category {
     font-family: 'Open Sans', sans-serif;
-
-
     margin-left: 32px;
     margin-top: 10px;
     width: 170px;
     height: 50px;
     font-size: 1.1em;
   }
-
   #calendar {
     font-family: 'Open Sans', sans-serif;
-    
     position: relative;
     display: inline-block;
     width: 376px;
     height: 40px;
   }
-
   #search-maxDate {
-  height: 40px;
-  border: solid;
-  border-width: 2px;
-  padding: 5px;
-  width: 160px;
-  font-size: 1.1em;
-  margin-left: 24px;
+    height: 40px;
+    border: solid;
+    border-width: 2px;
+    padding: 5px;
+    width: 160px;
+    font-size: 1.1em;
+    margin-left: 24px;
   }
-
   #search-minDate {
-  height: 40px;
-  border: solid;
-  border-width: 2px;
-  padding: 5px;
-  width: 160px;
-  font-size: 1.1em;
-  margin-left: 14px;
+    height: 40px;
+    border: solid;
+    border-width: 2px;
+    padding: 5px;
+    width: 160px;
+    font-size: 1.1em;
+    margin-left: 14px;
   }
-
   #searchButton {
     margin-left: 40px;
     margin-bottom: 40px;

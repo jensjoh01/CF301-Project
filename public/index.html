@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="/vendor/styles/reset.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/modules.css">
@@ -21,10 +22,9 @@
   <script id="list-template" type="text/x-handlebars-template">
     <ul>
       <li><a target="_blank" href={{url}}>{{name}}</a></li>
-      <li><img src="./img/{{genre.segment.name}}.png" width="50px" height="50px"/></li>
-      <li>{{date.localDate}} </li>
-      <li>{{venues}}</li>
-      <li>{{genre.segment.name}}</li>
+      <li>DATE: {{date.localDate}} </li>
+      <li>VENUE: {{venues}}</li>
+      <li>CATEGORY: {{genre.segment.name}}<img src="./img/{{genre.segment.name}}.png" width="50px" height="50px"/></li>
     </ul>
   </script>
 
@@ -33,7 +33,7 @@
 
 </head>
 
-<body>
+<body id="indexBody">
 
   <header>
 
@@ -48,7 +48,7 @@
     </a>
       </div>
 
-      <div class="branding">  <img src="img/ticket.jpg" style="width:130px;height:60px;"> </div>
+      <div class="branding">  <a href="index.html"><img src="img/tj.png" style="width:130px;height:60px;"> </a></div>
       <ul class="navbar-nav">
         <li><a href="/about.html">About</a></li>
         <li><a href="/index.html">Home</a></li>
@@ -70,7 +70,7 @@
   <form id="input-form" >
   <fieldset>
 
-    <legend>FIND FUN EVENTS</legend>
+    <legend>Find Your Next Event</legend>
     <label>
       <input type="text" id="search-city" placeholder="City" required>
     </label>
@@ -116,17 +116,19 @@
   </div>
 
     <div id="btn-container">
-      <button id="btn-back">Start Over</button>
+      <button id="btn-back">START OVER</button>
     </div>
 
 
-  <footer>
-  <nav class="navbar_footer">
-    <a href="/index.html">Ticket Jedi</a>
-    <a href=&copy;</a>
-    <a href="http://mbsy.co/hBFWw/" target="_blank"><p>&copy; 2017 Codefellows.org  Code 301 Students<p></a>
-   </nav>
-  </footer>
+
+    <footer>
+      <nav class="navbar_footer">
+        <ul>
+          <li><a href="/index.html">Ticket Jedi</a></li>
+          <li><a href="http://mbsy.co/hBFWw/" target="_blank"><p>&copy; 2017 Codefellows.org  Code 301 Students<p></a></li>
+        </ul>
+       </nav>
+    </footer>
 
     <script type="text/javascript" src="./scripts/views/view.js"></script>
     <script src="./scripts/controllers/controller.js"></script>
