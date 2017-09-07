@@ -42,4 +42,4 @@ function initMarkers(map) {
       infoWindow.open(map, marker);
     })
   });
-};
+}
