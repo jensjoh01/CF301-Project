@@ -20,7 +20,7 @@ app.get('/about', (request, response) => response.sendFile('about.html', {root: 
 
 
 
-app.get('/test/:loc/:keyword?/:classify?', tmTest);
+app.get('/test/:loc/:keyword?/:classify?/:minDate?', tmTest);
 app.get('/*', (request, response) => response.sendFile('index.html', {root: './public'}));
 
 

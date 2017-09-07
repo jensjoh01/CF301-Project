@@ -5,7 +5,7 @@ Events.all = [];
 
 Search.trigger = function(){
 
-  $.get(`/test/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}`)
+  $.get(`/test/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}/${newSearch.minDate}`)
   .then(data => Events.all = data._embedded.events
   .map(obj => new Events(obj))).then(initMap).then(view.index).catch(console.error);
 };
@@ -41,7 +41,8 @@ Search.listener = function() {
   $('#input-form').on('submit', Search.submit);
 };
 
-
+let time = new Date($('#search-minDate').val());
+console.log(time);
 
 Search.submit = function(event) {
   event.preventDefault();
