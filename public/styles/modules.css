@@ -54,7 +54,7 @@ text-align: center;
 
 }
 
-#start-date {
+#search-maxDate {
 height: 40px;
 border: solid;
 border-width: 2px;
@@ -63,7 +63,7 @@ width: 148px;
 
 }
 
-#end-date {
+#search-minDate {
 height: 40px;
 border: solid;
 border-width: 2px;
@@ -132,13 +132,13 @@ width: 148px;
   #calendar {
     position: relative;
     display: inline-block;
-    width: 362px;
+    width: 366px;
     height: 40px;
-    margin: 10px 40px;
+    margin: 10px 36px;
 
   }
 
-  #start-date {
+  #search-maxDate {
   height: 40px;
   border: solid;
   border-width: 2px;
@@ -146,7 +146,7 @@ width: 148px;
   width: 160px;
   }
 
-  #end-date {
+  #search-minDate {
   height: 40px;
   position: absolute;
   right: 0;
