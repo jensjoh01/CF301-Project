@@ -52,13 +52,21 @@ text-align: center;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
+#search-category {
+  margin-top: 10px;
+  width: 300px;
+  height: 40px;
+  background-color: #BCE7FD;
+  border: 0;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+}
+
 #calendar {
   position: relative;
   display: inline-block;
   width: 300px;
   height: 40px;
   margin: 10px;
-
 }
 
 #search-maxDate {
@@ -67,7 +75,7 @@ border: solid;
 border-width: 2px;
 padding: 5px;
 width: 133px;
-
+margin-top: 10px;
 }
 
 #search-minDate {
@@ -76,6 +84,7 @@ border: solid;
 border-width: 2px;
 padding: 5px;
 width: 133px;
+margin-top: 10px;
 }
 
 #searchButton {
@@ -150,7 +159,15 @@ width: 133px;
   #search-classify {
     margin-left: 40px;
     margin-top: 10px;
-    width: 374px;
+    width: 170px;
+    height: 50px;
+    font-size: 1.1em;
+  }
+
+  #search-category {
+    margin-left: 32px;
+    margin-top: 10px;
+    width: 170px;
     height: 50px;
     font-size: 1.1em;
   }
@@ -160,8 +177,6 @@ width: 133px;
     display: inline-block;
     width: 376px;
     height: 40px;
-    margin: 10px 12px;
-
   }
 
   #search-maxDate {
@@ -171,18 +186,17 @@ width: 133px;
   padding: 5px;
   width: 160px;
   font-size: 1.1em;
+  margin-left: 24px;
   }
 
   #search-minDate {
   height: 40px;
-  position: absolute;
-  right: 0;
-  top: 0;
   border: solid;
   border-width: 2px;
   padding: 5px;
   width: 160px;
   font-size: 1.1em;
+  margin-left: 14px;
   }
 
   #searchButton {
