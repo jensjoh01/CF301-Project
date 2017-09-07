@@ -88,5 +88,4 @@ function initShowResults() {
 }
 
 $('#btn-back').on('click',initShowSearch);
-$('#input-form').on('submit',initShowResults);
 initShowSearch();

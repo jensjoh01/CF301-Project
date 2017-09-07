@@ -11,8 +11,16 @@ Events.catArtThe = ['Children\'s Theatre','Classical','Comedy','Cultural','Dance
 Search.trigger = function(){
 
   $.get(`/tmReq/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}/${newSearch.minDate}/${newSearch.maxDate}`)
-  .then(data => Events.all = data._embedded.events
-  .map(obj => new Events(obj))).then(initMap).then(view.index).catch(console.error);
+  .then(data => {
+    if(!data._embedded){
+      return alert('No data found!!')
+    } else{
+      Events.all = data._embedded.events.map(obj => new Events(obj));
+      initShowResults();
+      initMap();
+      view.index();
+    }
+  },error => console.error(error));
 };
 
 
@@ -47,7 +55,7 @@ Search.catPicker = function(){
   let classDD = $('#search-classify');
   let catDD = $('#search-category');
   catDD.empty();
-  catDD.append($('<option value="">Select Category</option>'))
+  catDD.append($('<option value="">Sub-Category</option>'))
   if(classDD.val() === 'Music'){
     Search.popCat(Events.catMusic);
   } else if(classDD.val() === 'Films'){
@@ -63,8 +71,6 @@ Search.popCat = function(cat){
     $('#search-category').append(opt);
   });
 };
-
-
 
 Search.submit = function(event) {
   event.preventDefault();
