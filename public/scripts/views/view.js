@@ -80,14 +80,13 @@ $('#listResult').on('mouseleave', 'ul', function() {
 function initShowSearch() {
   $('main').fadeIn();
   $('#mapContainer, #listResult, #btn-back').hide();
-  //change event listeners
 }
 
 function initShowResults() {
   $('main').hide();
   $('#mapContainer, #listResult, #btn-back').fadeIn();
-  //change event listener
 }
+
 $('#btn-back').on('click',initShowSearch);
 $('#input-form').on('submit',initShowResults);
 initShowSearch();

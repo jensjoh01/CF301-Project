@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/modules.css">
 
+
   <script id="list-template" type="text/x-handlebars-template">
     <ul>
       <li><a target="_blank" href={{url}}>{{name}}</a></li>
@@ -70,6 +71,7 @@
   <h1>Your life is about to get more interesting.</h1>
   <form id="input-form" >
   <fieldset>
+
     <legend>FIND FUN EVENTS</legend>
     <label>
       <input type="text" id="search-city" placeholder="City" required>
@@ -80,14 +82,18 @@
     </label>
 
     <select id="search-classify">
-      <option value="">Select Category</option>
+      <option value="">- Category</option>
       <option value="Music">Music</option>
       <option value="Films">Films</option>
       <option value="Sports">Sports</option>
       <option value="Arts & Theatre">Arts and Theatre</option>
     </select>
 
-    <div id="calendar">
+    <select id="search-category">
+      <option value="">- Sub-Category</option>
+    </selct>
+
+  <div id="calendar">
     <label>
       <input type="date" id="search-minDate" value="" placeholder="Start Date">
     </label>
@@ -98,27 +104,14 @@
   </div>
 
 
-    <button id="searchButton" type="submit">SEARCH</button>
+  <button id="searchButton" type="submit">SEARCH</button>
+
+
+
   </fieldset>
   </form>
 
-  <!-- <div class="dropdown">
-     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category
-     <span class="caret"></span></button>
-     <ul class="dropdown-menu" id="search-classify">
-       <li><a tabindex="-1" value="Music">Music</a></li>
-       <li class="dropdown-submenu">
-         <a class="test" tabindex="-1" href="#">more music <span class="caret"></span></a>
-         <ul class="dropdown-menu">
-           <li><a tabindex="-1" value="Hip-Hop/Rap">Hip-Hop/Rap</a></li>
-           <li><a tabindex="-1" value="Jazz">Jazz</a></li>
-         </ul>
-       </li>
-       <li><a tabindex="-1" value="Films">Films</a></li>
-       <li><a tabindex="-1" value="Sports">Sports</a></li>
-       <li><a tabindex="-1" value="Arts & Theatre">Arts & Theatre</a></li>
-     </ul>
-   </div> -->
+
 
   </main>
 
@@ -154,6 +147,8 @@
     <a href=&copy;</a>
     <a href="http://mbsy.co/hBFWw/" target="_blank"><p>&copy; 2017 Codefellows.org  Code 301 Students<p></a>
    </nav>
+
+
   </footer>
 
     <script type="text/javascript" src="./scripts/views/view.js"></script>
