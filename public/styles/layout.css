@@ -49,19 +49,23 @@
   border: solid;
   border-color: #A1CDF4;
   border-radius: 5px;
-  margin: 0 20px;
+  margin: 20px 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
+#resultsContainer {
+  width: 100%;
+}
+
 #map {
-  width: 640px;
-  height: 550px;
+  height: 100%;
   background-color: grey;
 }
 
 #mapContainer {
   float: right;
-  margin: 0 20px;
-  width: 640px;
-  height: 400px;
+  overflow: hidden;
+  margin: 20px 20px;
+  width: 600px;
+  height: 550px;
 }
