@@ -36,6 +36,7 @@
   </script>
 
   <header>
+
     <nav class="navbar">
       <div class="open-slide">
         <a href="#" onclick="openSlideMenu()">
@@ -66,60 +67,72 @@
 
   <body>
     <main>
-  <h1>Your life is about to get more interesting.</h1>
-  <p>Search. Click. Buy. <span id="strike">Change The World. </span> Have Fun. </p>
-  <form id="input-form">
-  <fieldset>
-    <legend>Search Events: </legend>
-    <label>
-      <input type="text" id="search-city" placeholder="City" required>
-    </label>
-
-    <label>
-      <input type="text" id="search-keyword" placeholder="Keyword">
-    </label>
-
-    <select id="search-classify">
-      <option value="">Select Category</option>
-      <option value="Music">Music</option>
-      <option value="Films">Films</option>
-      <option value="Sports">Sports</option>
-      <option value="Arts & Theatre">Arts and Theatre</option>
-    </select>
-
-    <label>
-      <input type="date" id="start-date" placeholder="Start Date">
-    </label>
+    <h1>Your life is about to get more interesting.</h1>
+    <p>Search. Click. Buy. <span id="strike">Change The World. </span> Have Fun. </p>
+    <form id="input-form">
+    <fieldset>
+      <legend>Search Events: </legend>
+      <label>
+        <input type="text" id="search-city" placeholder="City" required>
+      </label>
 
       <label>
-      <input type="date" id="end-date" placeholder="End Date">
-    </label>
+        <input type="text" id="search-keyword" placeholder="Keyword">
+      </label>
+
+        <label>
+        <input type="date" id="search-minDate" placeholder="After this date">
+
+      <select id="search-classify">
+        <option value="">Select Category</option>
+        <option value="Music">Music</option>
+        <option value="Films">Films</option>
+        <option value="Sports">Sports</option>
+        <option value="Arts & Theatre">Arts and Theatre</option>
+      </select>
+
+
+        <label>
+        <input type="date" id="search-maxDate" placeholder="Before this date">
+      </label>
 
 
 
-    <button type="submit">SEARCH</button>
-  </fieldset>
-  </form>
 
-  <!-- <div class="dropdown">
-     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category
-     <span class="caret"></span></button>
-     <ul class="dropdown-menu" id="search-classify">
-       <li><a tabindex="-1" value="Music">Music</a></li>
-       <li class="dropdown-submenu">
-         <a class="test" tabindex="-1" href="#">more music <span class="caret"></span></a>
-         <ul class="dropdown-menu">
-           <li><a tabindex="-1" value="Hip-Hop/Rap">Hip-Hop/Rap</a></li>
-           <li><a tabindex="-1" value="Jazz">Jazz</a></li>
-         </ul>
-       </li>
-       <li><a tabindex="-1" value="Films">Films</a></li>
-       <li><a tabindex="-1" value="Sports">Sports</a></li>
-       <li><a tabindex="-1" value="Arts & Theatre">Arts & Theatre</a></li>
-     </ul>
-   </div> -->
-   
-</main>
+    <!-- <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu" id="search-classify">
+        <li><a tabindex="-1" value="Music">Music</a></li>
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">more music <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" value="Hip-Hop/Rap">Hip-Hop/Rap</a></li>
+            <li><a tabindex="-1" value="Jazz">Jazz</a></li>
+          </ul>
+        </li>
+        <li><a tabindex="-1" value="Films">Films</a></li>
+        <li><a tabindex="-1" value="Sports">Sports</a></li>
+        <li><a tabindex="-1" value="Arts & Theatre">Arts & Theatre</a></li>
+
+
+
+
+      </ul>
+    </div> -->
+
+
+
+
+        <button type="submit">CLICK</button>
+        <fieldset>
+    </form>
+
+
+      <button type="submit">SEARCH</button>
+    </fieldset>
+    </form>
+  </main>
 
     <div id="mapContainer">
       <div id="map"></div>
@@ -137,7 +150,13 @@
     });
     </script>
 
-
+<footer>
+  <nav class="navbar_footer">
+    <a href="/index.html">Ticket Jedi</a>
+    <a href=&copy;</a>
+    <p>&copy; 2017 Codefellows.org Code 301 Students<p>
+   </nav>
+</footer>
 
     <script type="text/javascript" src="./scripts/views/view.js"></script>
     <script src="./scripts/controllers/controller.js"></script>
