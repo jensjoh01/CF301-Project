@@ -32,8 +32,10 @@ function Search(keyword,loc,classify,minDate,maxDate){
 
   this.keyword = keyword.length === 0 ? null : keyword;
   this.classify = classify.length === 0 ? null : classify;
+
   this.minDate = minDate.length === 0 ? null : minDate;
   this.maxDate = maxDate.length === 0 ? null : maxDate;
+
 }
 
 Search.listener = function() {
