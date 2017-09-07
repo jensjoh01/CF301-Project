@@ -1,11 +1,11 @@
 'use strict';
-
+console.log('hi');
 
 Events.all = [];
 
 Search.trigger = function(){
 
-  $.get(`/test/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}/${newSearch.minDate}`)
+  $.get(`/test/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}/${newSearch.minDate}/${newSearch.maxDate}`)
   .then(data => Events.all = data._embedded.events
   .map(obj => new Events(obj))).then(initMap).then(view.index).catch(console.error);
 };
