@@ -1,11 +1,11 @@
 'use strict';
-
+console.log('hi');
 
 Events.all = [];
 
 Search.trigger = function(){
 
-  $.get(`/test/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}`)
+  $.get(`/test/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}/${newSearch.minDate}/${newSearch.maxDate}`)
   .then(data => Events.all = data._embedded.events
   .map(obj => new Events(obj))).then(initMap).then(view.index).catch(console.error);
 };
@@ -24,7 +24,7 @@ function Events(obj){
 
 let newSearch = {};
 
-function Search(keyword,loc,classify,minDate){
+function Search(keyword,loc,classify,minDate,maxDate){
   this.loc = loc;
 
   // keyword.length === 0 ? null : this.keyword = keyword;
@@ -32,7 +32,10 @@ function Search(keyword,loc,classify,minDate){
 
   this.keyword = keyword.length === 0 ? null : keyword;
   this.classify = classify.length === 0 ? null : classify;
-  // this.minDate = minDate.length === 0 ? null : minDate;
+
+  this.minDate = minDate.length === 0 ? null : minDate;
+  this.maxDate = maxDate.length === 0 ? null : maxDate;
+
 }
 
 Search.listener = function() {
@@ -42,11 +45,10 @@ Search.listener = function() {
 };
 
 
-
 Search.submit = function(event) {
   event.preventDefault();
   newSearch = new Search($('#search-keyword').val(),
-  $('#search-city').val(),$('#search-classify').val(),$('#search-minDate').val());
+  $('#search-city').val(),$('#search-classify').val(),$('#search-minDate').val(),$('#search-maxDate').val());
   Search.trigger();
   $('#input-form')[0].reset();
 }

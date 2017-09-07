@@ -68,6 +68,7 @@ function closeSlideMenu(){
   document.getElementById('side-menu').style.width = '0';
 }
 
+
 $('#listResult').on('mouseenter', 'ul', function() {
   $(this).animate({borderWidth: 5},200);
 })
