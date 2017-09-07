@@ -5,7 +5,7 @@ Events.all = [];
 
 Search.trigger = function(){
 
-  $.get(`/test/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}/${newSearch.minDate}/${newSearch.maxDate}`)
+  $.get(`/tmReq/${newSearch.loc}/${newSearch.keyword}/${newSearch.classify}/${newSearch.minDate}/${newSearch.maxDate}`)
   .then(data => Events.all = data._embedded.events
   .map(obj => new Events(obj))).then(initMap).then(view.index).catch(console.error);
 };
@@ -34,8 +34,6 @@ function Search(keyword,loc,classify,minDate,maxDate){
 }
 
 Search.listener = function() {
-  // $('.tab-content').show();
-  // $('#export-field').hide();
   $('#input-form').on('submit', Search.submit);
 };
 

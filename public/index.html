@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
 
 <head>
   <meta charset="UTF-8">
@@ -18,6 +16,8 @@
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/modules.css">
+  <link rel="stylesheet" href="/styles/dropdown.css">
+
 
 
   <title>Ticket Jedi | Welcome</title>
@@ -101,26 +101,51 @@
 
 
     <button id="searchButton" type="submit">SEARCH</button>
+
+
+
   </fieldset>
   </form>
 
-  <!-- <div class="dropdown">
-     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category
-     <span class="caret"></span></button>
-     <ul class="dropdown-menu" id="search-classify">
-       <li><a tabindex="-1" value="Music">Music</a></li>
-       <li class="dropdown-submenu">
-         <a class="test" tabindex="-1" href="#">more music <span class="caret"></span></a>
-         <ul class="dropdown-menu">
-           <li><a tabindex="-1" value="Hip-Hop/Rap">Hip-Hop/Rap</a></li>
-           <li><a tabindex="-1" value="Jazz">Jazz</a></li>
-         </ul>
-       </li>
-       <li><a tabindex="-1" value="Films">Films</a></li>
-       <li><a tabindex="-1" value="Sports">Sports</a></li>
-       <li><a tabindex="-1" value="Arts & Theatre">Arts & Theatre</a></li>
-     </ul>
-   </div> -->
+
+
+  <div class="container">
+  	<div class="row">
+          <h2>Multi level dropdown menu in Bootstrap 3</h2>
+          <hr>
+          <div class="dropdown">
+              <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary">
+                  Dropdown <span class="caret"></span>
+              </a>
+      		<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                <li><a href="#">Some action</a></li>
+                <li><a href="#">Some other action</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                  <a tabindex="-1" href="#">Hover me for more options</a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">Second level</a></li>
+                    <li class="dropdown-submenu">
+                      <a href="#">Even More..</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">3rd level</a></li>
+                      	<li><a href="#">3rd level</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Second level</a></li>
+                    <li><a href="#">Second level</a></li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+  	</div>
+  </div>
+
+
+
+
+
+
 
 </main>
     <div id="mapContainer">
