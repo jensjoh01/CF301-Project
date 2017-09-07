@@ -4,6 +4,12 @@ body {
   /*outline: orange 1px dashed;*/
 }
 
+.about-h1 {
+  font-size: 3em;
+  text-align: center;
+  margin: 40px 0px;
+}
+
 #about {
   display: flex;
   align-content: flex-start;
