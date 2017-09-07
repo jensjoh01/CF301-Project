@@ -47,11 +47,11 @@ body {
 }
 
 .navbar {
-  /*background-color: #D9B310;
-  background-color: #0B3C5D;*/
+  /*background-color: #D9B310;*/
+  /*background-color: #0B3C5D;*/
   /*background-color: #328CC1;*/
-  /*background-color: #1D2731;*/
-  background-color: #59A5D8;
+  background-color: #1D2731;
+  /*background-color: #59A5D8;*/
   overflow: hidden;
   height: 60px;
 }
@@ -142,7 +142,8 @@ body {
   }
 }
 .navbar_footer {
-  background-color: #59A5D8;
+  /*background-color: #59A5D8;*/
+  background-color: #1d2731;
   overflow: hidden;
   height: 60px;
 }
