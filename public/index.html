@@ -22,7 +22,7 @@
     <ul>
       <li><a target="_blank" href={{url}}>{{name}}</a></li>
       <li><img src="./img/{{genre.segment.name}}.png" width="50px" height="50px"/></li>
-      <li>{{date.localDate}} </li>
+      <li id="eventDate">{{date.localDate}} </li>
       <li>{{venues}}</li>
       <li>{{genre.segment.name}}</li>
     </ul>
@@ -65,8 +65,6 @@
 
   </header>
 
-
-
   <main>
   <h1>Your life is about to get more interesting.</h1>
   <form id="input-form" >
@@ -90,7 +88,7 @@
     </select>
 
     <select id="search-category">
-      <option value="">Sub-Category</option>
+      <option value="">- Sub-Category</option>
     </selct>
 
   <div id="calendar">
@@ -103,27 +101,17 @@
     </label>
   </div>
 
-
   <button id="searchButton" type="submit">SEARCH</button>
-
-
 
   </fieldset>
   </form>
-
-
-
   </main>
 
   <div id="resultsContainer">
     <section id="listResult"></section>
-
     <div id="mapContainer">
       <div id="map"></div>
     </div>
-
-
-
   </div>
 
     <div id="btn-container">
@@ -147,15 +135,11 @@
     <a href=&copy;</a>
     <a href="http://mbsy.co/hBFWw/" target="_blank"><p>&copy; 2017 Codefellows.org  Code 301 Students<p></a>
    </nav>
-
-
   </footer>
 
     <script type="text/javascript" src="./scripts/views/view.js"></script>
     <script src="./scripts/controllers/controller.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CpO1gfAC0k_usGb6J8adZj3QwoT1OZs"></script>
-
-
 
 </body>
 
