@@ -22,33 +22,33 @@ function Events(obj){
   this.image = obj.images;
 }
 
-let newSearch = {};
-
-function Search(keyword,loc,classify,minDate){
-  this.loc = loc;
-
-  // keyword.length === 0 ? null : this.keyword = keyword;
-  // classify.length === 0 ? null : this.classify = classify;
-
-  this.keyword = keyword.length === 0 ? null : keyword;
-  this.classify = classify.length === 0 ? null : classify;
-  this.minDate = minDate.length === 0 ? null : minDate;
-}
-
-Search.listener = function() {
-  // $('.tab-content').show();
-  // $('#export-field').hide();
-  $('#input-form').on('submit', Search.submit);
-};
-
-
-
-Search.submit = function(event) {
-  event.preventDefault();
-  newSearch = new Search($('#search-keyword').val(),
-  $('#search-city').val(),$('#search-classify').val(),$('#search-minDate').val());
-  Search.trigger();
-  $('#input-form')[0].reset();
-}
-
-Search.listener();
+// let newSearch = {};
+//
+// function Search(keyword,loc,classify,minDate){
+//   this.loc = loc;
+//
+//   // keyword.length === 0 ? null : this.keyword = keyword;
+//   // classify.length === 0 ? null : this.classify = classify;
+//
+//   this.keyword = keyword.length === 0 ? null : keyword;
+//   this.classify = classify.length === 0 ? null : classify;
+//   this.minDate = minDate.length === 0 ? null : minDate;
+// }
+//
+// Search.listener = function() {
+//   // $('.tab-content').show();
+//   // $('#export-field').hide();
+//   $('#input-form').on('submit', Search.submit);
+// };
+//
+//
+//
+// Search.submit = function(event) {
+//   event.preventDefault();
+//   newSearch = new Search($('#search-keyword').val(),
+//   $('#search-city').val(),$('#search-classify').val(),$('#search-minDate').val());
+//   Search.trigger();
+//   $('#input-form')[0].reset();
+// }
+//
+// Search.listener();
