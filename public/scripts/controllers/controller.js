@@ -26,8 +26,12 @@ let newSearch = {};
 
 function Search(keyword,loc,classify){
   this.loc = loc;
-  this.keyword = keyword.length === 0 ? undefined : keyword;
-  this.classify = classify.length === 0 ? undefined : classify;
+
+  // keyword.length === 0 ? null : this.keyword = keyword;
+  // classify.length === 0 ? null : this.classify = classify;
+
+  this.keyword = keyword.length === 0 ? null : keyword;
+  this.classify = classify.length === 0 ? null : classify;
 }
 
 Search.listener = function() {
