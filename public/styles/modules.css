@@ -12,10 +12,16 @@ h2 {
 fieldset {
   max-width: 360px;
   margin: 0 auto;
+<<<<<<< HEAD
+  outline: orange 1px dashed;
+  height: 300px;
+  max-width: 860px;
+=======
 }
 
 #input-form {
 text-align: center;
+>>>>>>> master
 }
 
 #search-city {
