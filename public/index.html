@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/modules.css">
+  <link rel="stylesheet" href="/styles/dropdown.css">
+
 
   <script id="list-template" type="text/x-handlebars-template">
     <ul>
@@ -80,12 +82,17 @@
     </label>
 
     <select id="search-classify">
-      <option value="">Select Category</option>
+      <option value="">Select Class</option>
       <option value="Music">Music</option>
       <option value="Films">Films</option>
       <option value="Sports">Sports</option>
       <option value="Arts & Theatre">Arts and Theatre</option>
     </select>
+
+
+    <select id="search-category">
+    </selct>
+
 
     <div id="calendar">
     <label>
@@ -99,26 +106,13 @@
 
 
     <button id="searchButton" type="submit">SEARCH</button>
+
+
+
   </fieldset>
   </form>
 
-  <!-- <div class="dropdown">
-     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category
-     <span class="caret"></span></button>
-     <ul class="dropdown-menu" id="search-classify">
-       <li><a tabindex="-1" value="Music">Music</a></li>
-       <li class="dropdown-submenu">
-         <a class="test" tabindex="-1" href="#">more music <span class="caret"></span></a>
-         <ul class="dropdown-menu">
-           <li><a tabindex="-1" value="Hip-Hop/Rap">Hip-Hop/Rap</a></li>
-           <li><a tabindex="-1" value="Jazz">Jazz</a></li>
-         </ul>
-       </li>
-       <li><a tabindex="-1" value="Films">Films</a></li>
-       <li><a tabindex="-1" value="Sports">Sports</a></li>
-       <li><a tabindex="-1" value="Arts & Theatre">Arts & Theatre</a></li>
-     </ul>
-   </div> -->
+
 
   </main>
 
