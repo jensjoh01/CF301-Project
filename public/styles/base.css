@@ -74,9 +74,9 @@
   padding-bottom: 1px;
 }*/
 
-#side-menu a.active-link {
+/*#side-menu a.active-link {
   border-left: 1px solid #FFFEFC;
-}
+}*/
 
 @media(max-width:568px) {
   .navbar-nav {
@@ -92,8 +92,16 @@
 
 ******About*******
 
+#about h1 {
+  color: green;
+}
+
+#team {
+  /*display: inline-block;*/
+}
+
 .team1 {
-  display:inline;
+  /*display:inline;*/
   float: right;
   width: 50%;
 }
