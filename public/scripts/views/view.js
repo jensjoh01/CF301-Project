@@ -74,3 +74,7 @@ $('#listResult').on('mouseenter', 'ul', function() {
 $('#listResult').on('mouseleave', 'ul', function() {
   $(this).animate({borderWidth: 3},200);
 })
+
+// $('#searchButton').on('mouseenter', function() {
+//   $(this).animate({backgroundColor: 'black'},500)
+// })

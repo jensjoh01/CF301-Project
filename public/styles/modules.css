@@ -1,9 +1,6 @@
 /*______Search Form_________*/
 /** {outline: orange 1px dashed;}*/
 
-main {
-
-}
 
 #strike {
   text-decoration: line-through;
@@ -11,54 +8,164 @@ main {
 h2 {
   display: inline-block;
 }
-#input-form {
+
+fieldset {
+  max-width: 360px;
   margin: 0 auto;
+<<<<<<< HEAD
   outline: orange 1px dashed;
   height: 300px;
   max-width: 860px;
+=======
+}
+
+#input-form {
+text-align: center;
+>>>>>>> master
 }
 
 #search-city {
-  width: 362px;
+  width: 300px;
   height: 40px;
-  margin-left: 40px;
-  margin-top: 40px;
+  margin: 0 auto;
+  border: solid;
+  border-width: 2px;
+  padding: 5px;
 }
 
 #search-keyword {
-  width: 362px;
+  width: 300px;
   height: 40px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 0 auto;
   margin-top: 10px;
+  border: solid;
+  border-width: 2px;
+  padding: 5px;
 }
-
 #search-classify {
-  margin-left: 40px;
   margin-top: 10px;
   width: 300px;
   height: 40px;
+  background-color: #BCE7FD;
+  border: 0;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+}
+
+#calendar {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+
 }
 
 #start-date {
-  margin-left: 40px;
-  width: 191px;
-  height: 40px;
+height: 40px;
+border: solid;
+border-width: 2px;
+padding: 5px;
+width: 148px;
+
 }
 
 #end-date {
-  margin-left: 40px;
-  width: 191px;
-  height: 40px;
+height: 40px;
+border: solid;
+border-width: 2px;
+padding: 5px;
+width: 148px;
 }
 
-button {
+#searchButton {
   width: 120px;
   height: 40px;
-  background-color: #7C0A02;
+  background-color: #59A5D8;
   border: 0;
-  color: white;
+  color: #7C0A02;
   font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#searchButton:hover {
+  background-color: #A1CDF4;
+  transition: background-color 200ms ease-in;
+}
+
+@media only screen and (min-width: 862px) {
+
+  fieldset {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  #input-form {
+    margin: 0 auto;
+    height: 300px;
+    max-width: 860px;
+    text-align: left;
+  }
+
+  #search-city {
+    width: 362px;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
+    border: solid;
+    border-width: 2px;
+    padding: 5px;
+  }
+
+  #search-keyword {
+    width: 362px;
+    height: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    border: solid;
+    border-width: 2px;
+    padding: 5px;
+  }
+
+  #search-classify {
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 362px;
+    height: 40px;
+  }
+
+  #calendar {
+    position: relative;
+    display: inline-block;
+    width: 362px;
+    height: 40px;
+    margin: 10px 40px;
+
+  }
+
+  #start-date {
+  height: 40px;
+  border: solid;
+  border-width: 2px;
+  padding: 5px;
+  width: 160px;
+  }
+
+  #end-date {
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: solid;
+  border-width: 2px;
+  padding: 5px;
+  width: 160px;
+  }
+
+  #searchButton {
+    margin-left: 40px;
+  }
 }
 
 

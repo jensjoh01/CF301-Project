@@ -21,7 +21,7 @@
 
 #listResult {
   width: 500px;
-  height: 400px;
+  height: 550px;
   overflow: scroll;
   padding: 0 2px;
   border: solid;
@@ -33,7 +33,7 @@
 
 #map {
   width: 640px;
-  height: 400px;
+  height: 550px;
   background-color: grey;
 }
 
