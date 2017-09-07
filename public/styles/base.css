@@ -5,7 +5,7 @@
 }
 
 .navbar a {
-  float: left;
+  float: right;
   display: block;
   color: #FFFEFC;
   text-align: center;
@@ -24,13 +24,22 @@
   color: #000;
 }
 
+.branding {
+  float: left;
+  color: #FFFEFC;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .side-nav {
   height: 100%;
   width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #111;
   opacity: 0.9;
   overflow-x: hidden;
@@ -59,10 +68,11 @@
   margin-left: 50px;
 }
 
-.navbar-nav li.active-link a {
+
+/*.navbar-nav li.active-link a {
   border-bottom: 1px solid #FFFEFC;
   padding-bottom: 1px;
-}
+}*/
 
 #side-menu a.active-link {
   border-left: 1px solid #FFFEFC;
@@ -78,4 +88,16 @@
   .open-slide {
     display: none
   }
+}
+
+******About*******
+
+.team1 {
+  float: right;
+  width: 50%;
+}
+
+.team2 {
+  float: right;
+  width: 50%;
 }
