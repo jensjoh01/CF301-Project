@@ -93,6 +93,7 @@
 ******About*******
 
 .team1 {
+  display:inline;
   float: right;
   width: 50%;
 }
