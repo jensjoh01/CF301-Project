@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/modules.css">
 
+
   <title>Ticket Jedi | Welcome</title>
 
 </head>
@@ -26,7 +27,8 @@
 <body>
   <script id="list-template" type="text/x-handlebars-template">
     <ul>
-      <li><a href={{url}}>{{name}}</a></li>
+      <li><a target="_blank" href={{url}}>{{name}}</a></li>
+      <li><img src="./img/{{genre.segment.name}}.png" width="50px" height="50px"/></li>
       <li>{{date.localDate}} </li>
       <li>{{venues}}</li>
       <li>{{genre.segment.name}}</li>
@@ -46,9 +48,11 @@
     </a>
       </div>
 
+      <div class="branding">Ticket Jedi Logo</div>
+
       <ul class="navbar-nav">
         <li><a href="/about.html">About</a></li>
-        <li class="active-link"><a href="/">Home</a></li>
+        <li><a href="/">Home</a></li>
       </ul>
 
     </nav>
@@ -62,32 +66,37 @@
   </header>
 
   <body>
+    <main>
+    <h1>Your life is about to get more interesting.</h1>
+    <p>Search. Click. Buy. <span id="strike">Change The World. </span> Have Fun. </p>
     <form id="input-form">
-      <fieldset>
-        <legend>Search events: </legend>
-        <label>
-        <input type="text" id="search-keyword" placeholder="keyword">
+    <fieldset>
+      <legend>Search Events: </legend>
+      <label>
+        <input type="text" id="search-city" placeholder="City" required>
       </label>
 
-        <label>
-        <input type="text" id="search-city" placeholder="city" required>
+      <label>
+        <input type="text" id="search-keyword" placeholder="Keyword">
       </label>
 
         <label>
         <input type="date" id="search-minDate" placeholder="After this date">
-      </label>
 
-        <label>
-        <input type="date" id="search-maxDate" placeholder="Before this date">
-      </label>
-
-        <select id="search-classify">
-        <option value="">Select Class</option>
+      <select id="search-classify">
+        <option value="">Select Category</option>
         <option value="Music">Music</option>
         <option value="Films">Films</option>
         <option value="Sports">Sports</option>
         <option value="Arts & Theatre">Arts and Theatre</option>
       </select>
+
+
+        <label>
+        <input type="date" id="search-maxDate" placeholder="Before this date">
+      </label>
+
+
 
 
     <!-- <div class="dropdown">
@@ -119,6 +128,11 @@
         <fieldset>
     </form>
 
+
+      <button type="submit">SEARCH</button>
+    </fieldset>
+    </form>
+  </main>
 
     <div id="mapContainer">
       <div id="map"></div>

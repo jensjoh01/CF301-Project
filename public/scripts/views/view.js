@@ -6,7 +6,6 @@ const preList = function(){
   let $list = $('#listResult');
 
   $list.empty();
-  // $list.show().siblings().hide();
 };
 
 const render = Handlebars.compile($('#list-template').text());
@@ -34,7 +33,8 @@ function initMarkers(map) {
       var marker = new google.maps.Marker({
         position: {lat: parseFloat(json.location.latitude), lng: parseFloat(json.location.longitude)},
         visible: false,
-        map: map
+        map: map,
+        animation: google.maps.Animation.DROP
       });
 
 
@@ -53,6 +53,7 @@ function initMarkers(map) {
         } else {
           marker.setVisible(false);
           $(this).css('background-color', '#BCE7FD');
+          marker.setAnimation(google.maps.Animation.DROP)
         }
       })
     }
@@ -67,3 +68,9 @@ function closeSlideMenu(){
   document.getElementById('side-menu').style.width = '0';
 }
 
+$('#listResult').on('mouseenter', 'ul', function() {
+  $(this).animate({borderWidth: 5},200);
+})
+$('#listResult').on('mouseleave', 'ul', function() {
+  $(this).animate({borderWidth: 3},200);
+})
