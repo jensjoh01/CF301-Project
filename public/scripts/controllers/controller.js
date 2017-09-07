@@ -24,7 +24,7 @@ function Events(obj){
 
 let newSearch = {};
 
-function Search(keyword,loc,classify,minDate){
+function Search(keyword,loc,classify,minDate,maxDate){
   this.loc = loc;
 
   // keyword.length === 0 ? null : this.keyword = keyword;
@@ -33,6 +33,7 @@ function Search(keyword,loc,classify,minDate){
   this.keyword = keyword.length === 0 ? null : keyword;
   this.classify = classify.length === 0 ? null : classify;
   this.minDate = minDate.length === 0 ? null : minDate;
+  this.maxDate = maxDate.length === 0 ? null : maxDate;
 }
 
 Search.listener = function() {
@@ -41,13 +42,11 @@ Search.listener = function() {
   $('#input-form').on('submit', Search.submit);
 };
 
-let time = new Date($('#search-minDate').val());
-console.log(time);
 
 Search.submit = function(event) {
   event.preventDefault();
   newSearch = new Search($('#search-keyword').val(),
-  $('#search-city').val(),$('#search-classify').val(),$('#search-minDate').val());
+  $('#search-city').val(),$('#search-classify').val(),$('#search-minDate').val(),$('#search-maxDate').val());
   Search.trigger();
   $('#input-form')[0].reset();
 }
