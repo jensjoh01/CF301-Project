@@ -20,7 +20,7 @@
 }
 
 #listResult {
-  width: 400px;
+  width: 500px;
   height: 400px;
   overflow: scroll;
   padding: 0 2px;
@@ -28,6 +28,7 @@
   border-color: #A1CDF4;
   border-radius: 5px;
   margin: 0 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
 #map {

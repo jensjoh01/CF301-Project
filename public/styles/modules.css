@@ -1,0 +1,29 @@
+/*______Search Form_________*/
+* {outline: orange 1px dashed;}
+
+#strike {
+  text-decoration: line-through;
+}
+h2 {
+  display: inline-block;
+}
+#input-form {
+  outline: orange 1px dashed;
+  margin: 100px;
+  height: 300px;
+}
+
+#search-city {
+  width: 40%;
+  height: 40px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+#search-keyword {
+  width: 40%;
+  height: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+}
