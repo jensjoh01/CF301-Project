@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
 <head>
   <meta charset="UTF-8">
@@ -19,12 +19,6 @@
   <link rel="stylesheet" href="/styles/dropdown.css">
 
 
-
-  <title>Ticket Jedi | Welcome</title>
-
-</head>
-
-<body>
   <script id="list-template" type="text/x-handlebars-template">
     <ul>
       <li><a target="_blank" href={{url}}>{{name}}</a></li>
@@ -34,6 +28,13 @@
       <li>{{genre.segment.name}}</li>
     </ul>
   </script>
+
+
+  <title>Ticket Jedi | Welcome</title>
+
+</head>
+
+<body>
 
   <header>
 
@@ -65,12 +66,12 @@
 
   </header>
 
-  <body>
 
-    <main>
+
+  <main>
   <h1>Your life is about to get more interesting.</h1>
   <p>Search. Click. Buy. <span id="strike">Change The World. </span> Have Fun. </p>
-  <form id="input-form">
+  <form id="input-form" >
   <fieldset>
     <legend>Search Events: </legend>
     <label>
@@ -147,13 +148,19 @@
 
 
 
-</main>
+  </main>
+
     <div id="mapContainer">
       <div id="map"></div>
     </div>
 
 
     <section id="listResult"></section>
+
+    <div id="btn-container">
+      <button id="btn-back">Start Over</button>
+    </div>
+
     <script>
     $(document).ready(function(){
       $('.dropdown-submenu a.test').on("click", function(e){
@@ -164,13 +171,14 @@
     });
     </script>
 
-<footer>
+
+  <footer>
   <nav class="navbar_footer">
     <a href="/index.html">Ticket Jedi</a>
     <a href=&copy;</a>
     <p>&copy; 2017 Codefellows.org Code 301 Students<p>
    </nav>
-</footer>
+  </footer>
 
     <script type="text/javascript" src="./scripts/views/view.js"></script>
     <script src="./scripts/controllers/controller.js"></script>
@@ -178,6 +186,6 @@
 
 
 
-  </body>
+</body>
 
 </html>

@@ -12,14 +12,14 @@ Search.trigger = function(){
 
 
 function Events(obj){
-  this.name = obj.name;
-  this.date = obj.dates.start;
-  this.url = obj.url;
-  this.location = obj._embedded.venues[0].location;
-  this.venues = obj._embedded.venues[0].name;
-  this.price = obj.priceRanges;
+  this.name = obj.name ? obj.name : null;
+  this.date = obj.dates.start ? obj.dates.start : null;
+  this.url = obj.url ? obj.url : null;
+  this.location = obj._embedded.venues[0].location ? obj._embedded.venues[0].location : null;
+  this.venues = obj._embedded.venues[0].name ? obj._embedded.venues[0].name : null;
+  this.price = obj.priceRanges ? obj.priceRanges : null;
   this.genre = obj.classifications[0] ? obj.classifications[0] : null;
-  this.image = obj.images;
+  this.image = obj.images ? obj.images : null; 
 }
 
 let newSearch = {};
