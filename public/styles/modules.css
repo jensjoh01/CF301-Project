@@ -4,14 +4,15 @@
 /** {outline: orange 1px dashed;}*/
 
 main h1 {
+  font-family: 'Architects Daughter', cursive;
   text-align: center;
   margin-top: 40px;
   font-family: sans-serif;
   font-size: 2em;
   margin-bottom: 20px;
   /*background-color: #BCE7FD;*/
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
-
+  /*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);*/
+  letter-spacing: .1em;
 }
 
 legend {
@@ -94,8 +95,8 @@ fieldset {
 }
 
 #searchButton {
-  width: 180px;
-  height: 60px;
+  width: 220px;
+  height: 70px;
   background-color: #328CC1;
   border: 0;
   color: #FFFEFC;
@@ -126,13 +127,12 @@ fieldset {
   transform: scaleX(1);
 }
 
-
 @media only screen and (min-width: 862px) {
   main h1 {
     font-family: 'Roboto', sans-serif;
+    letter-spacing: .1em;
     text-align: center;
     margin-top: 60px;
-    font-family: sans-serif;
     font-size: 2em;
   }
   legend {
@@ -140,6 +140,7 @@ fieldset {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.15em;
     padding: 5px;
+    letter-spacing: .1em;
   }
   fieldset {
     max-width: 100%;
@@ -149,73 +150,84 @@ fieldset {
   }
   #input-form {
     margin: 0 auto;
-    height: 300px;
-    max-width: 860px;
+    height: 400px;
+    max-width: 1000px;
     text-align: left;
+    /*background-color: #e6e6e6;*/
   }
   #search-city {
     font-family: 'Open Sans', sans-serif;
-    width: 357px;
-    height: 40px;
+    width: 430px;
+    height: 50px;
     margin-left: 40px;
-    margin-top: 40px;
+    margin-top: 50px;
     border: solid;
     border-width: 2px;
     padding-left: 10px;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    letter-spacing: .2em;
   }
   #search-keyword {
     font-family: 'Open Sans', sans-serif;
-    width: 357px;
-    height: 40px;
+    width: 430px;
+    height: 50px;
     margin-left: 10px;
     margin-right: 40px;
     margin-top: 40px;
     border: solid;
     border-width: 2px;
     padding-left: 10px;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    letter-spacing: .2em;
   }
   #search-classify {
     font-family: 'Open Sans', sans-serif;
     margin-left: 40px;
     margin-top: 10px;
-    width: 170px;
-    height: 50px;
+    width: 205px;
+    height: 60px;
     font-size: 1.1em;
+    letter-spacing: .1em;
   }
   #search-category {
     font-family: 'Open Sans', sans-serif;
     margin-left: 32px;
     margin-top: 10px;
-    width: 170px;
-    height: 50px;
+    width: 205px;
+    height: 60px;
     font-size: 1.1em;
+    letter-spacing: .1em;
   }
   #calendar {
     font-family: 'Open Sans', sans-serif;
     position: relative;
     display: inline-block;
-    width: 376px;
-    height: 40px;
+    width: 400px;
+    height: 50px;
+    letter-spacing: .1em;
   }
   #search-maxDate {
     height: 40px;
     border: solid;
     border-width: 2px;
     padding: 5px;
-    width: 160px;
+    width: 180px;
     font-size: 1.1em;
-    margin-left: 24px;
+    margin-left: 56px;
+    letter-spacing: .05em;
+    text-align: center;
   }
   #search-minDate {
     height: 40px;
     border: solid;
     border-width: 2px;
     padding: 5px;
-    width: 160px;
+    width: 180px;
     font-size: 1.1em;
-    margin-left: 14px;
+    margin-left: 40px;
+    letter-spacing: .05em;
+    text-align: center;
+
   }
   #searchButton {
     margin-left: 40px;
