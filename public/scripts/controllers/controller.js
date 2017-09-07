@@ -5,7 +5,7 @@ Events.all = [];
 Events.catMusic = ['Ballads/Romantic','Blues','Chanson Francaise','Children\'s Music','Classical','Country','Dance/Electronic','Folk','Hip-Hop/Rap','Holiday','Jazz','Medieval/Renaissance','Metal','New Age','Other','Pop','R&B','Reggae','Religious','Rock','Undefined','World']
 Events.catFilms = ['Action/Adventure','Animation','Arthouse','Comedy','Documentary','Drama','Family','Foreign','Miscellaneous','Music','Urban'];
 Events.catSports = ['Aquatics','Athletic Races','Badminton','Bandy','Baseball','Basketball','Biathlon','Body Building','Boxing','Cricket','Curling','Cycling','Equestrian','Extreme','Floorball','Football','Golf','Gymnastics','Handball','Hockey','Ice Skating','Indoor Soccer','Lacrosse','Martial Arts','Miscellaneous','Motorsports/Racing','Netball','Rodeo','Roller Hockey','Rugby','Ski jumping','Skiing','Soccer','Squash','Surfing','Swimming','Table Tennis','Tennis','Toros','Track & Field','Volleyball','Waterpolo','Wrestling'];
-Events.catArtThe = [];
+Events.catArtThe = ['Children\'s Theatre','Classical','Comedy','Cultural','Dance','Espectaculo','Fashion','Fine Art','Magic & Illusion','Miscellaneous','Multimedia','Music','Opera','Performance Art','Puppetry','Spectacular','Theatre','Variety'];
 
 
 Search.trigger = function(){
@@ -68,10 +68,10 @@ Search.popCat = function(cat){
 
 Search.submit = function(event) {
   event.preventDefault();
-  let searchCat = $('#search-category').val() === '' ? $('#search-classify').val() : $('#search-category').val();
+  // let searchCat = $('#search-category').val() === '' ? $('#search-classify').val() : $('#search-category').val();
 
   newSearch = new Search($('#search-keyword').val(),
-  $('#search-city').val(),searchCat,$('#search-minDate').val(),$('#search-maxDate').val());
+  $('#search-city').val(),$('#search-classify').val(),$('#search-minDate').val(),$('#search-maxDate').val());
   Search.trigger();
   $('#input-form')[0].reset();
 }
