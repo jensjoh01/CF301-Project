@@ -15,11 +15,11 @@ function Events(obj){
   this.name = obj.name ? obj.name : null;
   this.date = obj.dates.start ? obj.dates.start : null;
   this.url = obj.url ? obj.url : null;
-  this.location = obj._embedded.venues[0].location ? obj._embedded.venues[0].location : null;
-  this.venues = obj._embedded.venues[0].name ? obj._embedded.venues[0].name : null;
+  this.location = obj._embedded.venues ? obj._embedded.venues[0].location : null;
+  this.venues = obj._embedded.venues ? obj._embedded.venues[0].name : null;
   this.price = obj.priceRanges ? obj.priceRanges : null;
-  this.genre = obj.classifications[0] ? obj.classifications[0] : null;
-  this.image = obj.images ? obj.images : null; 
+  this.genre = obj.classifications ? obj.classifications[0] : null;
+  this.image = obj.images ? obj.images : null;
 }
 
 let newSearch = {};
