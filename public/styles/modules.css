@@ -1,12 +1,19 @@
 /*______Search Form_________*/
 /** {outline: orange 1px dashed;}*/
 
-
-#strike {
-  text-decoration: line-through;
+main h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
-h2 {
-  display: inline-block;
+
+legend {
+  margin-left: 35px;
+  font-family: sans-serif;
+  font-size: 1.15em;
+  padding: 5px;
 }
 
 fieldset {
@@ -54,21 +61,21 @@ text-align: center;
 
 }
 
-#start-date {
+#search-maxDate {
 height: 40px;
 border: solid;
 border-width: 2px;
 padding: 5px;
-width: 148px;
+width: 133px;
 
 }
 
-#end-date {
+#search-minDate {
 height: 40px;
 border: solid;
 border-width: 2px;
 padding: 5px;
-width: 148px;
+width: 133px;
 }
 
 #searchButton {
@@ -89,9 +96,25 @@ width: 148px;
 
 @media only screen and (min-width: 862px) {
 
+  main h1 {
+    text-align: center;
+    margin-top: 60px;
+    font-family: sans-serif;
+    font-size: 2em;
+  }
+
+  legend {
+    margin-left: 35px;
+    font-family: sans-serif;
+    font-size: 1.15em;
+    padding: 5px;
+  }
+
   fieldset {
     max-width: 100%;
     margin: 0 auto;
+    margin-top: 80px;
+    border: solid;
   }
 
   #input-form {
@@ -102,51 +125,55 @@ width: 148px;
   }
 
   #search-city {
-    width: 362px;
+    width: 357px;
     height: 40px;
     margin-left: 40px;
     margin-top: 40px;
     border: solid;
     border-width: 2px;
-    padding: 5px;
+    padding-left: 10px;
+    font-size: 1.1em;
   }
 
   #search-keyword {
-    width: 362px;
+    width: 357px;
     height: 40px;
-    margin-left: 40px;
+    margin-left: 10px;
     margin-right: 40px;
-    margin-top: 10px;
+    margin-top: 40px;
     border: solid;
     border-width: 2px;
-    padding: 5px;
+    padding-left: 10px;
+    font-size: 1.1em;
   }
 
   #search-classify {
     margin-left: 40px;
     margin-top: 10px;
-    width: 362px;
-    height: 40px;
+    width: 374px;
+    height: 50px;
+    font-size: 1.1em;
   }
 
   #calendar {
     position: relative;
     display: inline-block;
-    width: 362px;
+    width: 376px;
     height: 40px;
-    margin: 10px 40px;
+    margin: 10px 12px;
 
   }
 
-  #start-date {
+  #search-maxDate {
   height: 40px;
   border: solid;
   border-width: 2px;
   padding: 5px;
   width: 160px;
+  font-size: 1.1em;
   }
 
-  #end-date {
+  #search-minDate {
   height: 40px;
   position: absolute;
   right: 0;
@@ -155,23 +182,11 @@ width: 148px;
   border-width: 2px;
   padding: 5px;
   width: 160px;
+  font-size: 1.1em;
   }
 
   #searchButton {
     margin-left: 40px;
+    margin-bottom: 40px;
   }
 }
-
-
-
-/*@media(max-width:568px) {
-  .navbar-nav {
-    display: none
-  }
-}
-
-@media(min-width:568px) {
-  .open-slide {
-    display: none
-  }
-}*/

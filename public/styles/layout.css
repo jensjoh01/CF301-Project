@@ -1,5 +1,27 @@
 /**{outline: orange 1px dashed;}*/
 
+#btn-container {
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#btn-back {
+  width: 120px;
+  height: 40px;
+  background-color: #59A5D8;
+  border: 0;
+  color: #7C0A02;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#btn-back:hover {
+  background-color: #A1CDF4;
+  transition: background-color 200ms ease-in;
+}
+
 #listResult ul {
   background: #BCE7FD;
   padding: 20px 10px;
@@ -27,19 +49,23 @@
   border: solid;
   border-color: #A1CDF4;
   border-radius: 5px;
-  margin: 0 20px;
+  margin: 20px 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
+#resultsContainer {
+  width: 100%;
+}
+
 #map {
-  width: 640px;
-  height: 550px;
+  height: 100%;
   background-color: grey;
 }
 
 #mapContainer {
   float: right;
-  margin: 0 20px;
-  width: 640px;
-  height: 400px;
+  overflow: hidden;
+  margin: 20px 20px;
+  width: 600px;
+  height: 550px;
 }
