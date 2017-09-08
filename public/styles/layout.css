@@ -1,5 +1,10 @@
 /**{outline: orange 1px dashed;}*/
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; 
+}
+
 #btn-container {
   max-width: 500px;
   text-align: center;
@@ -115,4 +120,35 @@
   margin: 20px 20px;
   width: 1000px;
   height: 550px;
+}
+
+@media only screen and (max-width: 820px) {
+
+  #resultsContainer {
+    display: block;
+    max-width: 100%;
+  }
+
+  #listResult {
+    width: 90%;
+    height: 200px;
+  }
+
+  #mapContainer {
+    width: 90%;
+    height: 300px;
+  }
+
+  header {
+    max-width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
 }
