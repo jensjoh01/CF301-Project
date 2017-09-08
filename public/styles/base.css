@@ -40,7 +40,6 @@ body {
 #about h3 {
   font-size: 2em;
   margin-top: 30px;
-  /*font-family: 'Open Sans', sans-serif;*/
   font-family: 'Roboto', sans-serif;
 
 }
@@ -48,7 +47,6 @@ body {
 #about p {
   margin: 30px;
   font-family: 'Open Sans', sans-serif;
-  /*font-family: 'Roboto', sans-serif;*/
   line-height: 1.5em;
 
 
@@ -178,11 +176,6 @@ body {
   letter-spacing: .1em;
   font-family: 'Open Sans', sans-serif;
 }
-
-/*.navbar_footer a:hover {
-  background-color: #FFFEFC;
-  color: #000;
-}*/
 
 
 
