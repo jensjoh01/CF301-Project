@@ -39,7 +39,7 @@ function initMarkers(map) {
 
 
       var infoWindow = new google.maps.InfoWindow({
-        content: `<h1>Event: ${json.name}</h1> <p>Date: ${json.date.localDate}</p> <p> Venue: ${json.venues}</p> <p>Category: ${json.genre.segment.name} </p> <p>Price: ${json.price ? '$'+parseInt(json.price[0].min) + ' - ' + '$' + parseInt(json.price[0].max) : 'N/A'}`
+        content: `<h1>Event: ${json.name}</h1> <p>Date: ${json.date.localDate}</p> <p> Venue: ${json.venues}</p> <p>Category: ${json.genre.segment.name} </p> <p>Price: ${json.price ? '$'+parseInt(json.price[0].min) + ' - ' + '$' + parseInt(json.price[0].max) : 'N/A'}</p>  <a class='twitter-share-button' href='https://twitter.com/intent/tweet?url=${json.url}'><img src="https://t15.deviantart.net/0Htx4lMbY-jG30WAW3gO5yHLkSc=/fit-in/700x350/filters:fixed_height(100,100):origin()/pre06/32b4/th/pre/f/2013/025/2/0/twitter_button__logo_v2_by_pixxiepaynee-d5sog0x.png" width="42" height="42" border="0"></a>`
       })
 
       marker.addListener('click', function() {
