@@ -2,22 +2,24 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
+<script>
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
 
-  return t;
-}(document, "script", "twitter-wjs"));</script>
+    return t;
+  }(document, "script", "twitter-wjs"));
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
@@ -30,6 +32,7 @@
   <link rel="stylesheet" href="/vendor/styles/reset.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/modules.css">
@@ -40,7 +43,7 @@
       <li><a target="_blank" href={{url}}>{{name}}</a></li>
       <li>DATE: {{date.localDate}} </li>
       <li>VENUE: {{venues}}</li>
-      <li>CATEGORY: {{genre.segment.name}}<img src="./img/{{genre.segment.name}}.png" width="50px" height="50px"/></li>
+      <li>CATEGORY: {{genre.segment.name}}<img src="./img/{{genre.segment.name}}.png" width="50px" height="50px" /></li>
     </ul>
   </script>
 
@@ -62,7 +65,7 @@
       </svg>
     </a>
       </div>
-      <div class="branding">  <a href="index.html"><img src="img/tj.png" style="width:130px;height:40px;"> </a></div>
+      <div class="branding"> <a href="index.html"><img src="img/tj.png" style="width:130px;height:40px;"> </a></div>
 
       <ul class="navbar-nav">
         <li><a href="/about.html">About</a></li>
@@ -81,20 +84,20 @@
   </header>
 
   <main>
-  <h1>Your life is about to get more interesting.</h1>
-  <form id="input-form" >
-  <fieldset>
+    <h1>Your life is about to get more interesting.</h1>
+    <form id="input-form">
+      <fieldset>
 
-    <legend>Find Your Next Event</legend>
-    <label>
+        <legend>Find Your Next Event</legend>
+        <label>
       <input type="text" id="search-city" placeholder="City" required>
     </label>
 
-    <label>
+        <label>
       <input type="text" id="search-keyword" placeholder="Keyword">
     </label>
 
-    <select id="search-classify">
+        <select id="search-classify">
       <option value="">- Category</option>
       <option value="Music">Music</option>
       <option value="Films">Films</option>
@@ -102,7 +105,7 @@
       <option value="Arts & Theatre">Arts and Theatre</option>
     </select>
 
-    <select id="search-category">
+        <select id="search-category">
       <option value="">- Sub-Category</option>
     </selct>
 
@@ -116,7 +119,7 @@
     </label>
   </div>
 
-  <button id="searchButton" class="button" type="submit">SEARCH</button>
+  <button id="searchButton" class="button" type="submit">SEARCH<span> &rArr;</span></button>
 
   </fieldset>
   </form>
@@ -131,7 +134,7 @@
   </div>
 
     <div id="btn-container" >
-      <button id="btn-back" class="button">START OVER</button>
+      <button id="btn-back" class="button"><span>&#8617; </span>START OVER</button>
     </div>
 
 
@@ -139,8 +142,8 @@
     <footer>
       <nav class="navbar_footer">
         <ul>
-          <li><a href="/index.html">Ticket Jedi</a></li>
-          <li><a href="http://mbsy.co/hBFWw/" target="_blank"><p>&copy; 2017 Codefellows.org  Code 301 Students<p></a></li>
+          <li>Ticket Jedi</li>
+          <li><a href="http://mbsy.co/hBFWw/" target="_blank"><p>&copy; 2017 Codefellows.org | Code 301 Students<p></a></li>
         </ul>
        </nav>
     </footer>
