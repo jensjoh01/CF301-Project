@@ -48,7 +48,8 @@ fieldset {
   margin-top: 10px;
   width: 300px;
   height: 40px;
-  background-color: #BCE7FD;
+  background-color: #0B3C5D;
+  color: #FFFEFC;
   border: 0;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }
@@ -57,35 +58,36 @@ fieldset {
   margin-top: 10px;
   width: 300px;
   height: 40px;
-  background-color: #BCE7FD;
+  background-color: #0B3C5D;
+  color: #FFFEFC;
   border: 0;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
-#calendar {
-  position: relative;
+#calendar input {
+  /*position: relative;
   display: inline-block;
   width: 300px;
-  height: 40px;
-  margin: 10px;
+  height: 90px;
+  margin: 10px;*/
 }
 
 #search-maxDate {
-  height: 40px;
+  /*height: 40px;
   border: solid;
   border-width: 2px;
   padding: 5px;
   width: 133px;
-  margin-top: 10px;
+  margin-top: 10px;*/
 }
 
 #search-minDate {
-  height: 40px;
+  /*height: 40px;
   border: solid;
   border-width: 2px;
   padding: 5px;
   width: 133px;
-  margin-top: 10px;
+  margin-top: 10px;*/
 }
 
 .button {
@@ -101,7 +103,10 @@ fieldset {
   position: relative;
   cursor: pointer;
   z-index: 0;
-  letter-spacing: .08em;
+  letter-spacing: .1em;
+  font-family: sans-serif;
+
+
 }
 
 .button:before {
@@ -134,15 +139,20 @@ footer {
   }
 
   main h1 {
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     letter-spacing: .1em;
     text-align: center;
     margin-top: 80px;
     font-size: 2em;
+    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'Droid Serif', serif;
   }
   legend {
     margin-left: 35px;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'Droid Serif', serif;
+
     font-size: 1.15em;
     padding: 5px;
     letter-spacing: .1em;
@@ -152,15 +162,24 @@ footer {
     margin: 0 auto;
     margin-top: 70px;
     border: solid;
+    border-width: 3px;
   }
   #input-form {
     margin: 0 auto;
     height: 400px;
     max-width: 1020px;
     text-align: left;
+    /*font-family: 'Raleway', sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+
   }
   #search-city {
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*font-weight: 600;*/
+    /*font-family: 'Raleway', sans-serif;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    background-color: #f2f2f2;
+    /*color: #1D2731;*/
     width: 420px;
     height: 50px;
     margin-left: 40px;
@@ -172,7 +191,9 @@ footer {
     letter-spacing: .2em;
   }
   #search-keyword {
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    background-color: #f2f2f2;
+
     width: 420px;
     height: 50px;
     margin-left: 30px;
@@ -185,7 +206,7 @@ footer {
     letter-spacing: .2em;
   }
   #search-classify {
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
     margin-left: 40px;
     margin-top: 10px;
     width: 205px;
@@ -194,7 +215,7 @@ footer {
     letter-spacing: .1em;
   }
   #search-category {
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
     margin-left: 32px;
     margin-top: 10px;
     width: 205px;
@@ -203,14 +224,17 @@ footer {
     letter-spacing: .1em;
   }
   #calendar {
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;
     position: relative;
     display: inline-block;
     width: 400px;
     height: 50px;
-    letter-spacing: .1em;
+    letter-spacing: .1em;*/
   }
   #search-maxDate {
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+
     height: 40px;
     border: solid;
     border-width: 2px;
@@ -222,6 +246,9 @@ footer {
     text-align: center;
   }
   #search-minDate {
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+
     height: 40px;
     border: solid;
     border-width: 2px;
