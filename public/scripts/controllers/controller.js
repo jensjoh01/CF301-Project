@@ -85,14 +85,3 @@ Search.submit = function(event) {
 }
 
 Search.listener();
-
-
-// $('#sortDate').on('click',Events.sort);
-Events.sort = function(){
-  Events.all.sort(function(a,b){
-    (new Date(a.date.localDate)) - (new Date(b.date.localDate))
-  });
-  initShowResults();
-  initMap();
-  view.index();
-};
