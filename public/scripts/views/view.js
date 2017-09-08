@@ -49,10 +49,10 @@ function initMarkers(map) {
       $('#listResult').on('click',`ul:nth-of-type(${index+1})`, function() {
         if(!marker.visible){
           marker.setVisible(true);
-          $(this).css('background-color', '#59A5D8');
+          $(this).css('background-color', '#1d2731');
         } else {
           marker.setVisible(false);
-          $(this).css('background-color', '#BCE7FD');
+          $(this).css('background-color', '#328cc1');
           marker.setAnimation(google.maps.Animation.DROP)
         }
       })
@@ -70,10 +70,10 @@ function closeSlideMenu(){
 
 
 $('#listResult').on('mouseenter', 'ul', function() {
-  $(this).animate({borderWidth: 5},200);
+  $(this).animate({borderWidth: 3},200);
 })
 $('#listResult').on('mouseleave', 'ul', function() {
-  $(this).animate({borderWidth: 3},200);
+  $(this).animate({borderWidth: 1},200);
 })
 
 
