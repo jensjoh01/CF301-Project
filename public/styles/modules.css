@@ -1,17 +1,11 @@
-/*______Search Form_________*/
-
-
-/** {outline: orange 1px dashed;}*/
+/************MOBILE VIEW*************/
 
 main h1 {
-  font-family: 'Architects Daughter', cursive;
   text-align: center;
   margin-top: 40px;
   font-family: sans-serif;
   font-size: 2em;
   margin-bottom: 20px;
-  /*background-color: #BCE7FD;*/
-  /*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);*/
   letter-spacing: .1em;
 }
 
@@ -127,6 +121,8 @@ fieldset {
   transform: scaleX(1);
 }
 
+/**************DESKTOP VIEW***************/
+
 @media only screen and (min-width: 1020px) {
   main h1 {
     font-family: 'Roboto', sans-serif;
@@ -153,8 +149,6 @@ fieldset {
     height: 400px;
     max-width: 1020px;
     text-align: left;
-    /*width:100%;*/
-    /*background-color: #e6e6e6;*/
   }
   #search-city {
     font-family: 'Open Sans', sans-serif;
@@ -228,7 +222,6 @@ fieldset {
     margin-left: 38px;
     letter-spacing: .05em;
     text-align: center;
-
   }
   #searchButton {
     margin-left: 40px;
