@@ -1,5 +1,4 @@
 'use strict';
-console.log('hi');
 
 Events.all = [];
 Events.catMusic = ['Ballads/Romantic','Blues','Chanson Francaise','Children\'s Music','Classical','Country','Dance/Electronic','Folk','Hip-Hop/Rap','Holiday','Jazz','Medieval/Renaissance','Metal','New Age','Other','Pop','R&B','Reggae','Religious','Rock','Undefined','World']
@@ -55,7 +54,7 @@ Search.catPicker = function(){
   let classDD = $('#search-classify');
   let catDD = $('#search-category');
   catDD.empty();
-  catDD.append($('<option value="">Sub-Category</option>'))
+  catDD.append($('<option value="">- Sub-Category</option>'))
   if(classDD.val() === 'Music'){
     Search.popCat(Events.catMusic);
   } else if(classDD.val() === 'Films'){
