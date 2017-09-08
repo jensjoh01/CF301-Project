@@ -125,17 +125,13 @@ footer {
 }
 
 
-<<<<<<< HEAD
+
 
 @media only screen and (min-width: 1020px) {
   footer {
     display: block;
   }
-=======
-/**************DESKTOP VIEW***************/
 
-@media only screen and (min-width: 1020px) {
->>>>>>> 3d719996015f5e098765c7df86d13e1877228f3a
   main h1 {
     font-family: 'Roboto', sans-serif;
     letter-spacing: .1em;
