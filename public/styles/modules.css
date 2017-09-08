@@ -127,7 +127,7 @@ fieldset {
   transform: scaleX(1);
 }
 
-@media only screen and (min-width: 862px) {
+@media only screen and (min-width: 1020px) {
   main h1 {
     font-family: 'Roboto', sans-serif;
     letter-spacing: .1em;
@@ -145,7 +145,7 @@ fieldset {
   fieldset {
     max-width: 100%;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 70px;
     border: solid;
   }
   #input-form {
@@ -153,6 +153,7 @@ fieldset {
     height: 400px;
     max-width: 1020px;
     text-align: left;
+    /*width:100%;*/
     /*background-color: #e6e6e6;*/
   }
   #search-city {
@@ -231,6 +232,6 @@ fieldset {
   }
   #searchButton {
     margin-left: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 }
