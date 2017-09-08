@@ -17,12 +17,14 @@ main {
 
 
 #listResult ul {
-  background: #BCE7FD;
-  padding: 20px 10px;
-  margin: 5px;
+  background: #328cc1;
+  padding: 20px;
+  /*margin: 5px;*/
+  margin-bottom: 10px;
   border: solid;
   border-color: #0b3c5d;
-  border-radius: 5px;
+  border-width: 1px;
+  /*border-radius: 5px;*/
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
   position: relative;
 }
@@ -30,34 +32,39 @@ main {
 
 #listResult ul li {
   font-family: 'Open Sans', sans-serif;
-  color: #1d2731;
+  /*color: #1d2731;*/
+  color: #e3e8ef;
   line-height: 1.4em;
+  /*display: inline-block;*/
+  margin-bottom: 2px;
 }
 
 #listResult ul li a {
   text-decoration: none;
-  font-family: 'Architects Daughter', cursive;
-  color: #1d2731;
+  font-family: 'Roboto', sans-serif;
+  /*color: #1d2731;*/
+  color: #e3e8ef;
   font-weight: bold;
   font-size: 1.5em;
+
 }
 
 #listResult {
   width: 500px;
   height: 550px;
   overflow: scroll;
-  padding: 0 2px;
+  padding: 4px;
   border: solid;
-  border-color: #A1CDF4;
-  border-radius: 5px;
+  border-color: #1d2731;
+  /*border-radius: 5px;*/
   margin: 20px 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
 #listResult img {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 20px;
+  bottom: 20px;
 }
 
 #resultsContainer {
